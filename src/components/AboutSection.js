@@ -43,6 +43,7 @@ const About = styled.div`
       }
       p {
         font-size: 1.2rem;
+        line-height: 1.5;
       }
     }
     button {

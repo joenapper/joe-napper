@@ -46,8 +46,9 @@ const Projects = styled.div`
   margin: auto;
   text-align: center;
   h2 {
-    font-size: 2rem;
-    padding-bottom: 1rem;
+    font-size: 3rem;
+    /* font-size: 2rem; */
+    padding-bottom: 1.5rem;
   }
   .cards {
     display: grid;

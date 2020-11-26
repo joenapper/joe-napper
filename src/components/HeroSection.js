@@ -26,12 +26,19 @@ const Hero = styled.article`
     text-align: center;
     span {
       font-size: 1rem; // NN
+      font-family: "Saira", sans-serif;
+      letter-spacing: 3px;
+      display: block;
+      transform: translateY(0.9rem);
     }
     h1 {
       font-size: 4rem;
+      font-family: "Saira", sans-serif;
+      color: #1f1f1f;
     }
     h3 {
       font-size: 1.2rem;
+      font-family: "Saira", sans-serif;
     }
   }
 `;

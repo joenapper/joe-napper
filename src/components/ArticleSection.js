@@ -51,6 +51,9 @@ const Article = styled.div`
       padding-top: 15rem;
       padding-bottom: 1rem;
     }
+    p {
+      font-size: 1.2rem;
+    }
     .cards {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
@@ -60,6 +63,13 @@ const Article = styled.div`
         background-color: #fff;
         height: 200px;
         box-shadow: 1px 1px 5px 1px #ccc;
+        h4 {
+          font-size: 1.2rem;
+          padding-bottom: 1rem;
+        }
+        p {
+          font-size: 1rem;
+        }
       }
     }
   }
