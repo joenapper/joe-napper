@@ -12,7 +12,7 @@ import CodeInstitute from "../media/CodeInstitute.png";
 const ProjectSection = () => {
   return (
     <Projects>
-      <h2>Projects</h2>
+      <h2>Projects // Clients // Portfolio</h2>
       <div className="cards">
         <div className="card">
           <img src={Clockwork} alt="Clockwork Media" />
@@ -30,9 +30,6 @@ const ProjectSection = () => {
           <img src={mechanized} alt="mechanized" />
         </div>
         <div className="card">
-          <img src={CMIS} alt="CMIS-UK" />
-        </div>
-        <div className="card">
           <img src={CodeInstitute} alt="Code Institute" />
         </div>
       </div>
@@ -41,26 +38,27 @@ const ProjectSection = () => {
 };
 
 const Projects = styled.div`
-  /* background-color: green; */
-  width: 50%;
-  margin: auto;
+  width: 50vw;
+  margin: 0 25vw;
   text-align: center;
+
   h2 {
     font-size: 3rem;
-    /* font-size: 2rem; */
-    padding-bottom: 1.5rem;
+    padding-bottom: 2.5rem;
+    text-transform: uppercase;
   }
+
   .cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
+
     .card {
       background-color: yellow;
       border-radius: 0.1rem;
-      /* min-height: 100%; */
-
       width: 100%;
       box-shadow: 1px 1px 5px 1px #ccc;
+
       img {
         width: 100%;
         max-height: 250px;

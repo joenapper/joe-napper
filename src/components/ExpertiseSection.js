@@ -43,45 +43,50 @@ const ExpertiseSection = () => {
 
 const Expertise = styled.div`
   background: #f4f4f4;
+
   .expertise-container {
-    //display: block;
-    width: 90%;
-    margin-left: 10%;
+    width: 90vw;
+    margin-left: 10vw;
     background: #fff;
     box-shadow: 1px 1px 5px 1px #ccc;
     transform: translateY(50%);
     position: relative;
+
     .expertise-text {
       display: flex;
       align-items: center;
-      /* width: 90%;
-      margin-left: 10%;
-      background: #fff;
-      border: 1px solid #c4c4c4;
-      transform: translateY(50%);
-      position: relative; */
+
       article {
-        padding: 4rem 20% 2rem 10%;
-        width: 100%;
+        padding: 4rem 20vw 2rem 10vw;
         text-align: right;
+
         h2 {
           font-size: 2rem;
           padding-bottom: 1rem;
         }
+
         p {
           font-size: 1.2rem;
           line-height: 1.5;
         }
       }
     }
+
     .expertise-icons {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      padding-right: 10%;
+      margin-left: 15vw;
       padding-bottom: 4rem;
+      width: 50vw;
+
       img {
-        padding: 0rem 1rem;
+        max-height: 100px;
+        max-width: 100px;
+        transition: 0.2s ease-in-out;
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
   }

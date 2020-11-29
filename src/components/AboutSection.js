@@ -24,37 +24,41 @@ const AboutSection = () => {
 
 const About = styled.div`
   background: #f4f4f4;
+  height: 30vh;
+
   div {
     display: flex;
     align-items: center;
-    width: 90%;
-    /* height: 300px; */
+    width: 90vw;
     background: #fff;
     box-shadow: 1px 1px 5px 1px #ccc;
     transform: translateY(-50%);
     position: relative;
+
     article {
-      /* padding-left: 20%;
-      width: 90%; */
-      padding: 4rem 10% 4rem 20%;
+      padding: 4rem 10vw 4rem 20vw;
+
       h2 {
         font-size: 2rem;
         padding-bottom: 1rem;
       }
+
       p {
         font-size: 1.2rem;
         line-height: 1.5;
       }
     }
+
     button {
       padding: 1rem;
       position: absolute;
-      right: 10%;
+      right: 10vw;
       bottom: 0;
       transform: translateY(50%);
-      background: #fdda3e;
+      background: var(--main-color);
       border: 1px solid #ccc;
-      /* box-shadow: 1px 1px 5px 1px #ccc; */
+      box-shadow: 1px 1px 5px 1px #919191; // Needs work
+      /* box-shadow: 1px 1px 5px 1px #ccc; */ //Needs work
     }
   }
 `;

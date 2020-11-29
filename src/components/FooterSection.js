@@ -1,22 +1,45 @@
 // Styled
 import styled from "styled-components";
+// Font Awesome
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const FooterSection = () => {
   return (
     <Footer>
       <div className="top-footer">
         <div>
-          <p>Joe Napper</p>
-          <p>joenapper.se@gmail.com</p>
+          <ul>
+            <li>
+              <a href="https://www.linkedin.com/in/joenapper6/" target="_blank">
+                Joe Napper
+              </a>
+            </li>
+            <li>
+              <a href="mailto:joenapper.se@gmail.com" target="_blank">
+                joenapper.se@gmail.com
+              </a>
+            </li>
+          </ul>
         </div>
         <div>
           <h4>Socials</h4>
           <ul>
             <li>
-              <a href="#">Linkedin</a>
+              <a href="https://www.linkedin.com/in/joenapper6/" target="_blank">
+                Linkedin
+              </a>
             </li>
             <li>
-              <a href="#">Twitter</a>
+              <a
+                href="https://twitter.com/joenappercgm?lang=en"
+                target="_blank"
+              >
+                Twitter
+              </a>
             </li>
           </ul>
         </div>
@@ -27,7 +50,9 @@ const FooterSection = () => {
               <a href="#">Articles</a>
             </li>
             <li>
-              <a href="#">Github</a>
+              <a href="https://github.com/joenapper" target="_blank">
+                Github
+              </a>
             </li>
           </ul>
         </div>
@@ -44,34 +69,73 @@ const FooterSection = () => {
         </div>
       </div>
       <div className="lower-footer">
-        <p>&copy;2020 JoeNapper. All rights reserved.</p>
-        <p>Follow me LINKS LINKS LINKS LINKS</p>
+        <p>&copy;Joe Napper 2020. All rights reserved.</p>
+        <div>
+          <p>Follow me</p>
+          <FontAwesomeIcon className="brand-icon" icon={faLinkedin} />
+          <FontAwesomeIcon className="brand-icon" icon={faTwitter} />
+          <FontAwesomeIcon className="brand-icon" icon={faGithub} />
+        </div>
       </div>
     </Footer>
   );
 };
 
 const Footer = styled.footer`
-  background: #fdda3e;
-  padding: 2rem 0;
+  background: var(--main-color);
+
   .top-footer,
   .lower-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 65%;
-    margin: 0 auto;
   }
+
   .top-footer {
-    padding-bottom: 2rem;
-    ul {
-      list-style: none;
-      li {
-        a {
-          text-decoration: none;
-          color: red;
+    background: #fff;
+    width: 90%;
+    margin: 0 5%;
+    padding: 4rem 15vw;
+    transform: translateY(-25%);
+    box-shadow: 1px 1px 5px 1px #ccc;
+
+    h4 {
+      line-height: 2.3;
+    }
+
+    a {
+      line-height: 1.7;
+    }
+  }
+
+  .lower-footer {
+    padding-bottom: 1rem;
+    width: 60vw;
+    margin: 0 20vw;
+
+    div {
+      display: flex;
+      align-items: center;
+
+      .brand-icon {
+        font-size: 1.5rem;
+        margin-left: 1rem;
+        color: #333333;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        &:hover {
+          transform: scale(1.1);
         }
       }
+    }
+  }
+
+  ul {
+    list-style: none;
+
+    a {
+      text-decoration: none;
+      color: #4d4d4d;
     }
   }
 `;
