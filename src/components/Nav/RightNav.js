@@ -1,19 +1,27 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const RightNav = ({ open }) => {
+  function mode() {
+    document.documentElement.style.setProperty("--main-color", "#282629");
+    document.documentElement.style.setProperty("--joenapper", "#f4f4f4");
+    document.documentElement.style.setProperty("--header-color", "#ccc");
+    document.documentElement.style.setProperty("--body-text-color", "#f4f4f4");
+  }
   return (
     <NavList open={open}>
       <li>
-        <a href="#">About</a>
+        <Link to="/about">About</Link>
       </li>
       <li>
-        <a href="#">Articles</a>
+        <Link to="/articles">Articles</Link>
       </li>
       <li>
-        <a href="#">Contact</a>
+        <Link to="/contact">Contact</Link>
       </li>
       <li>
-        <a href="#">Dark Mode</a>
+        <a onClick={mode}>Dark Mode</a>
+        {/* <button>Dark Mode</button> */}
       </li>
     </NavList>
   );
@@ -25,6 +33,10 @@ const NavList = styled.ul`
 
   li {
     margin-left: 3rem;
+
+    /* &:nth-child(4) {
+      background-color: green;
+    } */
 
     a {
       text-decoration: none;
@@ -43,34 +55,10 @@ const NavList = styled.ul`
       }
     }
 
-    /* a::after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 2px;
-      background-color: #fdda3e;
-      transition: width 0.4s;
-    } */
-
-    /* a:hover::after {
-      width: 100%;
-    } */
+    button {
+      background-color: transparent;
+    }
   }
-  /* ------------------------------
-  .nav-links a::after {
-    content:'';
-    display: block;
-    width: 0;
-    height: 2px;
-    background-color: #ffbd59;
-    transition: width .4s
-}
-
-.nav-links a:hover::after {
-    width: 100%;
-    transition: .4s;
-}
-------------------------------- */
 
   @media (max-width: 768px) {
     flex-direction: column;

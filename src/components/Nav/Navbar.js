@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import Burger from "./Burger";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
@@ -18,7 +19,8 @@ const Navbar = () => {
   return (
     <Header navbar={navbar}>
       <Nav>
-        <div className="logo">Home</div>
+        {/* <div className="logo">Home</div> */}
+        <Link to="/">Home</Link>
         <Burger />
       </Nav>
     </Header>

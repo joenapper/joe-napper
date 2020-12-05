@@ -105,6 +105,11 @@ const Footer = styled.footer`
 
     a {
       line-height: 1.7;
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        color: #000;
+      }
     }
   }
 
@@ -125,6 +130,7 @@ const Footer = styled.footer`
         transition: 0.2s ease-in-out;
         &:hover {
           transform: scale(1.1);
+          color: #000;
         }
       }
     }

@@ -1,23 +1,21 @@
 // Components
-import HeroSection from "../components/HeroSection";
-import AboutSection from "../components/AboutSection";
-import ProjectSection from "../components/ProjectSection";
-import ExpertiseSection from "../components/ExpertiseSection";
-import ArticleSection from "../components/ArticleSection";
-import ContactSection from "../components/ContactSection";
-import FooterSection from "../components/FooterSection";
+import HeroSection from "../components/Home/HeroSection";
+import AboutSection from "../components/Home/AboutSection";
+import ProjectSection from "../components/Home/ProjectSection";
+import ExpertiseSection from "../components/Home/ExpertiseSection";
+import ArticleSection from "../components/Home/ArticleSection";
+import ContactSection from "../components/Home/ContactSection";
 
 const Home = () => {
   return (
-    <div>
+    <main>
       <HeroSection />
       <AboutSection />
       <ProjectSection />
       <ExpertiseSection />
       <ArticleSection />
       <ContactSection />
-      <FooterSection />
-    </div>
+    </main>
   );
 };
 

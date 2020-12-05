@@ -42,7 +42,7 @@ const Hero = styled.article`
     h1 {
       font-size: 4rem;
       font-family: "Saira", sans-serif;
-      color: #1f1f1f;
+      color: var(--joenapper);
     }
 
     h3 {

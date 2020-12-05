@@ -12,22 +12,23 @@ const GlobalStyle = createGlobalStyle`
     } */
 
     :root {
-        --main-color: #fdda3e
+        --main-color: #fdda3e;
+        --joenapper: #1f1f1f;
+        --header-color: #333333;
+        --body-text-color: #4d4d4d;
     }
 
     body {
         background: #f4f4f4;
         overflow-x: hidden;
         font-family: "Montserrat", sans-serif;
-        color: #4d4d4d;
+        color: var(--body-text-color);
     }
-
-    $mainColor: yellow;
 
     h1,
     h2,
     button {
-        color: #333333
+        color: var(--header-color)
     }
 `;
 

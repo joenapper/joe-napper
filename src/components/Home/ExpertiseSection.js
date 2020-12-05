@@ -1,11 +1,11 @@
 // Images
-import HTML from "../media/html.png";
-import CSS from "../media/css.png";
-import Sass from "../media/sass.png";
-import JavaScript from "../media/js.png";
-import React from "../media/react.png";
-import Node from "../media/node.png";
-import Python from "../media/python.png";
+import HTML from "../../media/html.png";
+import CSS from "../../media/css.png";
+import Sass from "../../media/sass.png";
+import JavaScript from "../../media/js.png";
+import React from "../../media/react.png";
+import Node from "../../media/node.png";
+import Python from "../../media/python.png";
 // Styled
 import styled from "styled-components";
 

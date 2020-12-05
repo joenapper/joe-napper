@@ -1,18 +1,19 @@
 // Styled
 import styled from "styled-components";
 // Images
-import Clockwork from "../media/ClockworkMedia.png";
-import mechanized from "../media/mechanized.png";
-import NapperNetwork from "../media/NapperNetwork.png";
-import CMIS from "../media/CMIS-UK.png";
-import RubiCRM from "../media/RubiCRM.png";
-import HungryCobra from "../media/HungryCobra.png";
-import CodeInstitute from "../media/CodeInstitute.png";
+import Clockwork from "../../media/ClockworkMedia.png";
+import mechanized from "../../media/mechanized.png";
+import NapperNetwork from "../../media/NapperNetwork.png";
+// import CMIS from "../../media/CMIS-UK.png";
+import RubiCRM from "../../media/RubiCRM.png";
+import HungryCobra from "../../media/HungryCobra.png";
+import CodeInstitute from "../../media/CodeInstitute.png";
 
 const ProjectSection = () => {
   return (
     <Projects>
-      <h2>Projects // Clients // Portfolio</h2>
+      <h2>Portfolio</h2>
+      {/*  Projects // Clients // Portfolio */}
       <div className="cards">
         <div className="card">
           <img src={Clockwork} alt="Clockwork Media" />
