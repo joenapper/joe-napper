@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.js": "/joe-napper/static/js/main.10e2bb80.chunk.js",
+    "main.js.map": "/joe-napper/static/js/main.10e2bb80.chunk.js.map",
+    "runtime-main.js": "/joe-napper/static/js/runtime-main.aab39036.js",
+    "runtime-main.js.map": "/joe-napper/static/js/runtime-main.aab39036.js.map",
+    "static/js/2.74864b0a.chunk.js": "/joe-napper/static/js/2.74864b0a.chunk.js",
+    "static/js/2.74864b0a.chunk.js.map": "/joe-napper/static/js/2.74864b0a.chunk.js.map",
+    "static/js/3.e408b057.chunk.js": "/joe-napper/static/js/3.e408b057.chunk.js",
+    "static/js/3.e408b057.chunk.js.map": "/joe-napper/static/js/3.e408b057.chunk.js.map",
+    "index.html": "/joe-napper/index.html",
+    "static/js/2.74864b0a.chunk.js.LICENSE.txt": "/joe-napper/static/js/2.74864b0a.chunk.js.LICENSE.txt",
+    "static/media/ClockworkMedia.0c42b608.png": "/joe-napper/static/media/ClockworkMedia.0c42b608.png",
+    "static/media/CodeInstitute.ec32400e.png": "/joe-napper/static/media/CodeInstitute.ec32400e.png",
+    "static/media/GitHub.86369905.png": "/joe-napper/static/media/GitHub.86369905.png",
+    "static/media/HungryCobra.a7d285fa.png": "/joe-napper/static/media/HungryCobra.a7d285fa.png",
+    "static/media/NapperNetwork.bfbb7177.png": "/joe-napper/static/media/NapperNetwork.bfbb7177.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aab39036.js",
+    "static/js/2.74864b0a.chunk.js",
+    "static/js/main.10e2bb80.chunk.js"
+  ]
+}
