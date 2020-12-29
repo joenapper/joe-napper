@@ -7,10 +7,15 @@ import HungryCobra from "../../media/HungryCobra.png";
 import NapperNetwork from "../../media/NapperNetwork.png";
 import GitHub from "../../media/GitHub.png";
 import CodeInstitute from "../../media/CodeInstitute.png";
+// Animations
+import { fade } from "../../animation";
+import { useScroll } from "../useScroll";
+import { motion } from "framer-motion";
 
 const ProjectSection = () => {
+  const [element, controls] = useScroll();
   return (
-    <Projects>
+    <Projects variants={fade} animate={controls} initial="hidden" ref={element}>
       <h2>Portfolio</h2>
       <div className="cards">
         <Card
@@ -56,7 +61,7 @@ const ProjectSection = () => {
   );
 };
 
-const Projects = styled.div`
+const Projects = styled(motion.div)`
   width: 50vw;
   margin: 0 25vw;
   text-align: center;

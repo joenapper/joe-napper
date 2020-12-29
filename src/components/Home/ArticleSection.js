@@ -1,7 +1,12 @@
 // Styled
 import styled from "styled-components";
+// Animations
+import { fade } from "../../animation";
+import { useScroll } from "../useScroll";
+import { motion } from "framer-motion";
 
 const ArticleSection = () => {
+  const [element, controls] = useScroll();
   return (
     <Article>
       <div className="container">
@@ -10,7 +15,13 @@ const ArticleSection = () => {
           I like to write short articles on tips and tricks ive learned over the
           years.....
         </p>
-        <div className="cards">
+        <motion.div
+          className="cards"
+          variants={fade}
+          animate={controls}
+          initial="hidden"
+          ref={element}
+        >
           <a
             href="https://joenapper.medium.com/optimise-your-css-with-shorthand-properties-927e08b6afae"
             target="_blank"
@@ -51,7 +62,7 @@ const ArticleSection = () => {
             </p>
             <p>See All</p>
           </a>
-        </div>
+        </motion.div>
       </div>
     </Article>
   );

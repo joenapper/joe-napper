@@ -6,10 +6,19 @@ import ExperienceSection from "../components/About/ExperienceSection";
 import HobbieSection from "../components/About/HobbieSection";
 import VolunteerSection from "../components/About/VolunteerSection";
 import ContactSection from "../components/Home/ContactSection";
+// Animations
+import { motion } from "framer-motion";
+import { pageAnimation } from "../animation";
+import ScrollTop from "../components/ScrollTop";
 
 const About = () => {
   return (
-    <main>
+    <motion.main
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+    >
       <IntroSection />
       <SportingSection />
       <CodingSection />
@@ -17,7 +26,8 @@ const About = () => {
       <HobbieSection />
       <VolunteerSection />
       <ContactSection />
-    </main>
+      <ScrollTop />
+    </motion.main>
   );
 };
 

@@ -10,12 +10,6 @@ const AboutSection = () => {
         <div>
           <article>
             <h2>About Me</h2>
-            {/* <p>
-              From design and development to testing and deployment, my skillset
-              has been refined to work as efficiently and effectively as
-              possible. During my career I have solved numerous problems using
-              HTML, CSS, JavaScript, React.js, node.js and Python to name a few.
-            </p> */}
             <p>
               From design and development to testing and deployment, I have
               built many high end applications from scratch and updated existing

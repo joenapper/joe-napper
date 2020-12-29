@@ -1,11 +1,21 @@
 // Components
 import ContactSection from "../components/Home/ContactSection";
+// Animations
+import { motion } from "framer-motion";
+import { pageAnimation } from "../animation";
+import ScrollTop from "../components/ScrollTop";
 
 const Contact = () => {
   return (
-    <main>
+    <motion.main
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+    >
       <ContactSection />
-    </main>
+      <ScrollTop />
+    </motion.main>
   );
 };
 

@@ -1,10 +1,20 @@
 // Styled
 import styled from "styled-components";
+// Animations
+import { fade } from "../../animation";
+import { useScroll } from "../useScroll";
+import { motion } from "framer-motion";
 
 const VolunteerSection = () => {
+  const [element, controls] = useScroll();
   return (
     <Volunteer id="volunteer">
-      <article>
+      <motion.article
+        variants={fade}
+        animate={controls}
+        initial="hidden"
+        ref={element}
+      >
         <h2>Volunteer Work</h2>
         <p>
           I spent many years volunteering at my local training centre - passing
@@ -16,7 +26,7 @@ const VolunteerSection = () => {
           over £2500. I hope to take part in many more charitable events and use
           my skills to help charities reach their goals.
         </p>
-      </article>
+      </motion.article>
       <div></div>
     </Volunteer>
   );

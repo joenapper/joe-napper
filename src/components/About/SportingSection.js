@@ -1,10 +1,20 @@
 // Styled
 import styled from "styled-components";
+// Animations
+import { fade } from "../../animation";
+import { useScroll } from "../useScroll";
+import { motion } from "framer-motion";
 
 const SportingSection = () => {
+  const [element, controls] = useScroll();
   return (
     <Sport id="sports">
-      <article>
+      <motion.article
+        variants={fade}
+        animate={controls}
+        initial="hidden"
+        ref={element}
+      >
         <h2>Sports Coaching</h2>
         <p>
           From a very early age I trained in a number of martial arts -
@@ -16,7 +26,7 @@ const SportingSection = () => {
           them improve their skills which in turn improved my teamwork and
           leadership skills.
         </p>
-      </article>
+      </motion.article>
       <div></div>
     </Sport>
   );

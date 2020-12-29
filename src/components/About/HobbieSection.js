@@ -1,10 +1,20 @@
 // Styled
 import styled from "styled-components";
+// Animations
+import { fade } from "../../animation";
+import { useScroll } from "../useScroll";
+import { motion } from "framer-motion";
 
 const HobbieSection = () => {
+  const [element, controls] = useScroll();
   return (
     <Hobbie id="hobbies">
-      <article>
+      <motion.article
+        variants={fade}
+        animate={controls}
+        initial="hidden"
+        ref={element}
+      >
         <h2>Hobbies</h2>
         <p>
           In my spare time i like to keep active - whether that be a trip to the
@@ -15,7 +25,7 @@ const HobbieSection = () => {
           which has proven to be profitable and has the potential to help others
           with passive income.
         </p>
-      </article>
+      </motion.article>
       <div></div>
     </Hobbie>
   );

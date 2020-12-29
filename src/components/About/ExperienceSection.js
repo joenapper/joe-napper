@@ -1,10 +1,20 @@
 // Styled
 import styled from "styled-components";
+// Animations
+import { fade } from "../../animation";
+import { useScroll } from "../useScroll";
+import { motion } from "framer-motion";
 
 const CodingSection = () => {
+  const [element, controls] = useScroll();
   return (
     <Coding id="experience">
-      <article>
+      <motion.article
+        variants={fade}
+        animate={controls}
+        initial="hidden"
+        ref={element}
+      >
         <h2>Commercial Experience</h2>
         <p>
           I took the leap and secured a job as a Junior Developer within a small
@@ -14,7 +24,7 @@ const CodingSection = () => {
           in software development. My hard work paid off as I obtained a role
           working directly with the technical director at CMIS-UK.
         </p>
-      </article>
+      </motion.article>
       <div></div>
     </Coding>
   );

@@ -3,6 +3,7 @@ import styled from "styled-components";
 // Font Awesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLevelDownAlt } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-scroll";
 
 const IntroSection = () => {
   return (
@@ -16,26 +17,90 @@ const IntroSection = () => {
         </p>
         <div>
           <ul>
-            <li>
-              <FontAwesomeIcon className="icon-flipped" icon={faLevelDownAlt} />
-              <a href="#sports">Sports Coaching</a>
-            </li>
-            <li>
-              <FontAwesomeIcon className="icon-flipped" icon={faLevelDownAlt} />
-              <a href="#coding">Intro to Coding</a>
-            </li>
-            <li>
-              <FontAwesomeIcon className="icon-flipped" icon={faLevelDownAlt} />
-              <a href="#experience">Commercial Experience</a>
-            </li>
-            <li>
-              <FontAwesomeIcon className="icon-flipped" icon={faLevelDownAlt} />
-              <a href="#hobbies">Hobbies</a>
-            </li>
-            <li>
-              <FontAwesomeIcon className="icon-flipped" icon={faLevelDownAlt} />
-              <a href="#volunteer">Volunteer Work</a>
-            </li>
+            <Link
+              activeClass="active"
+              to="sports"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              <li>
+                <FontAwesomeIcon
+                  className="icon-flipped"
+                  icon={faLevelDownAlt}
+                />
+                <a href="#sports">Sports Coaching</a>
+              </li>
+            </Link>
+
+            <Link
+              activeClass="active"
+              to="coding"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              <li>
+                <FontAwesomeIcon
+                  className="icon-flipped"
+                  icon={faLevelDownAlt}
+                />
+                <a href="#coding">Intro to Coding</a>
+              </li>
+            </Link>
+
+            <Link
+              activeClass="active"
+              to="experience"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              <li>
+                <FontAwesomeIcon
+                  className="icon-flipped"
+                  icon={faLevelDownAlt}
+                />
+                <a href="#experience">Commercial Experience</a>
+              </li>
+            </Link>
+
+            <Link
+              activeClass="active"
+              to="hobbies"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              <li>
+                <FontAwesomeIcon
+                  className="icon-flipped"
+                  icon={faLevelDownAlt}
+                />
+                <a href="#hobbies">Hobbies</a>
+              </li>
+            </Link>
+
+            <Link
+              activeClass="active"
+              to="volunteer"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              <li>
+                <FontAwesomeIcon
+                  className="icon-flipped"
+                  icon={faLevelDownAlt}
+                />
+                <a href="#volunteer">Volunteer Work</a>
+              </li>
+            </Link>
           </ul>
         </div>
       </article>

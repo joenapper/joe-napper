@@ -1,10 +1,20 @@
 // Styled
 import styled from "styled-components";
+// Animations
+import { fade } from "../../animation";
+import { useScroll } from "../useScroll";
+import { motion } from "framer-motion";
 
 const CodingSection = () => {
+  const [element, controls] = useScroll();
   return (
     <Coding id="coding">
-      <article>
+      <motion.article
+        variants={fade}
+        animate={controls}
+        initial="hidden"
+        ref={element}
+      >
         <h2>Intro to Coding</h2>
         <p>
           I was first introduced to programming in secondary school and was
@@ -16,7 +26,7 @@ const CodingSection = () => {
           however, there wasn’t any coding involved so i decided to follow my
           passion and pursue a role as a developer.
         </p>
-      </article>
+      </motion.article>
       <div></div>
     </Coding>
   );

@@ -5,17 +5,27 @@ import ProjectSection from "../components/Home/ProjectSection";
 import ExpertiseSection from "../components/Home/ExpertiseSection";
 import ArticleSection from "../components/Home/ArticleSection";
 import ContactSection from "../components/Home/ContactSection";
+// Animations
+import { motion } from "framer-motion";
+import { pageAnimation } from "../animation";
+import ScrollTop from "../components/ScrollTop";
 
 const Home = () => {
   return (
-    <main>
+    <motion.main
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+    >
       <HeroSection />
       <AboutSection />
       <ProjectSection />
       <ExpertiseSection />
       <ArticleSection />
       <ContactSection />
-    </main>
+      <ScrollTop />
+    </motion.main>
   );
 };
 
