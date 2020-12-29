@@ -1,7 +1,8 @@
-import RightNav from "./RightNav";
-
 import { useState } from "react";
+// Styled
 import styled from "styled-components";
+// Components
+import RightNav from "./RightNav";
 
 const Burger = () => {
   const [open, setOpen] = useState(false);
@@ -29,7 +30,7 @@ const BurgerIcon = styled.div`
   div {
     width: 25px;
     height: 3px;
-    background-color: #000;
+    background-color: var(--header-color);
     margin: 5px;
     border-radius: 4px;
     transition: all 0.5s ease;

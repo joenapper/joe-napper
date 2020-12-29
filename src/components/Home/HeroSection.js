@@ -35,7 +35,7 @@ const Hero = styled.article`
     }
 
     span {
-      font-size: 1.3rem; // NN
+      font-size: 1.3rem;
       font-family: "Saira", sans-serif;
     }
 
@@ -44,10 +44,52 @@ const Hero = styled.article`
       font-family: "Saira", sans-serif;
       color: var(--joenapper);
     }
+  }
 
-    h3 {
-      font-size: 1.2rem;
-      font-family: "Saira", sans-serif;
+  @media (max-width: 1025px) {
+    height: 70vh;
+  }
+
+  @media (max-width: 550px) {
+    height: 80vh;
+
+    div {
+      margin-top: -10rem;
+      span {
+        font-size: 1rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 466px) {
+    height: 60vh;
+
+    div {
+      margin-top: -7rem;
+
+      h1 {
+        font-size: 2.1rem;
+      }
+    }
+  }
+
+  @media (max-width: 380px) {
+    div {
+      .role {
+        font-size: 0.8rem;
+      }
+
+      span {
+        font-size: 0.9rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
     }
   }
 `;

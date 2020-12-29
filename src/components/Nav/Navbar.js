@@ -1,7 +1,10 @@
 import { useState } from "react";
-import styled from "styled-components";
-import Burger from "./Burger";
+// Router
 import { Link } from "react-router-dom";
+// Styled
+import styled from "styled-components";
+// Components
+import Burger from "./Burger";
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
@@ -19,7 +22,6 @@ const Navbar = () => {
   return (
     <Header navbar={navbar}>
       <Nav>
-        {/* <div className="logo">Home</div> */}
         <Link to="/">Home</Link>
         <Burger />
       </Nav>
@@ -33,8 +35,8 @@ const Header = styled.header`
   z-index: 1;
   transition: all 0.1s ease-in-out;
   background: ${({ navbar }) =>
-    navbar ? "rgba(255, 255, 255, 1)" : "transparent"};
-  box-shadow: ${({ navbar }) => (navbar ? "1px 1px 5px 1px #919191" : "none")};
+    navbar ? "var(--secondary-color)" : "transparent"};
+  box-shadow: ${({ navbar }) => (navbar ? "var(--custom-shadow)" : "none")};
 `;
 
 const Nav = styled.nav`
@@ -44,6 +46,37 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  a {
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--header-color);
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+
+  @media (max-width: 1025px) {
+    width: 80%;
+
+    a {
+      font-size: 1.4rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .mode {
+      font-size: 4.5rem;
+    }
+  }
+
+  @media (max-width: 550px) {
+    height: 10vh;
+    width: 90%;
+
+    a {
+      font-size: 1.2rem;
+    }
+  }
 `;
 
 export default Navbar;

@@ -39,6 +39,7 @@ const Contact = styled.div`
   form {
     display: flex;
     flex-direction: column;
+    color: #f4f4f4;
 
     input,
     textarea {
@@ -49,6 +50,23 @@ const Contact = styled.div`
       border-bottom: 1px solid black;
       font-family: "Montserrat", sans-serif;
       font-size: 1rem;
+      color: var(--body-text-color);
+
+      ::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: var(--body-text-color);
+        opacity: 1; /* Firefox */
+      }
+
+      :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: var(--body-text-color);
+      }
+
+      ::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: var(--body-text-color);
+      }
     }
 
     /* Removes chrome defaults from autocomplete */
@@ -56,8 +74,8 @@ const Contact = styled.div`
     input:-webkit-autofill:hover,
     input:-webkit-autofill:focus,
     input:-webkit-autofill:active {
-      box-shadow: 0 0 0 30px #f4f4f4 inset !important;
-      -webkit-box-shadow: 0 0 0 30px #f4f4f4 inset !important;
+      box-shadow: 0 0 0 30px var(--body-color) inset !important;
+      -webkit-box-shadow: 0 0 0 30px var(--body-color) inset !important;
     }
 
     textarea {
@@ -71,9 +89,12 @@ const Contact = styled.div`
       margin-top: 1rem;
       border: none;
       background: var(--main-color);
-      box-shadow: 1px 1px 5px 1px #919191; //needs work
+      box-shadow: var(--custom-shadow);
       cursor: pointer;
-      /* box-shadow: 1px 1px 5px 1px #ccc; */ //needs work
+
+      &:hover {
+        box-shadow: 1px 1px 5px 1px #000;
+      }
     }
 
     .row {
@@ -86,6 +107,51 @@ const Contact = styled.div`
       #email {
         margin-left: 1rem;
         flex-grow: 1;
+      }
+    }
+  }
+
+  @media (max-width: 1025px) {
+    width: 60vw;
+    margin: 0 20vw;
+
+    form {
+      input,
+      textarea {
+        font-size: 1.4rem;
+      }
+      button {
+        font-size: 1.5rem;
+        padding: 1.2rem 0rem;
+      }
+    }
+  }
+
+  @media (max-width: 550px) {
+    padding-top: 12rem;
+    padding-bottom: 10rem;
+
+    h2 {
+      font-size: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    form {
+      input,
+      textarea {
+        font-size: 1rem;
+      }
+
+      .row {
+        flex-direction: column;
+
+        #name {
+          width: 100%;
+        }
+
+        #email {
+          margin: 0rem;
+        }
       }
     }
   }

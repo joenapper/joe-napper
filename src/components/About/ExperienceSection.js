@@ -1,8 +1,9 @@
+// Styled
 import styled from "styled-components";
 
 const CodingSection = () => {
   return (
-    <Coding>
+    <Coding id="experience">
       <article>
         <h2>Commercial Experience</h2>
         <p>
@@ -20,7 +21,7 @@ const CodingSection = () => {
 };
 
 const Coding = styled.section`
-  background-color: #fff;
+  background-color: var(--secondary-color);
   position: relative;
   padding: 6rem 0;
 
@@ -31,7 +32,7 @@ const Coding = styled.section`
     height: 80px;
     top: 0;
     left: 0;
-    background-color: #fff;
+    background-color: var(--secondary-color);
     transform: translateY(-50%) skewY(4deg);
     border-top: 1px solid rgba(204, 204, 204, 0.5);
   }
@@ -43,7 +44,7 @@ const Coding = styled.section`
     height: 80px;
     top: 0;
     right: 0;
-    background-color: #fff;
+    background-color: var(--secondary-color);
     transform: translateY(-50%) skewY(-4deg);
     border-top: 1px solid rgba(204, 204, 204, 0.5);
   }
@@ -71,6 +72,21 @@ const Coding = styled.section`
     width: 10%;
     margin: 1rem auto;
     border-radius: 50%;
+  }
+
+  @media (max-width: 1025px) {
+    article {
+      width: 60vw;
+      margin: 0 20vw;
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+
+    div {
+      width: 15%;
+    }
   }
 `;
 

@@ -1,14 +1,14 @@
+// Styled
 import styled from "styled-components";
 
 const SportingSection = () => {
   return (
-    <Sport>
+    <Sport id="sports">
       <article>
         <h2>Sports Coaching</h2>
-        {/* and Competitive Background */}
         <p>
           From a very early age I trained in a number of martial arts -
-          taekwondo being my favourite. I spent a lot of time training and
+          Taekwondo being my favourite. I spent a lot of time training and
           perfecting my skills which taught me the importance of practice and
           hard work. My dedication paid off as I was soon placed on the
           competitive team and after a successful career I decided to transition
@@ -23,7 +23,7 @@ const SportingSection = () => {
 };
 
 const Sport = styled.section`
-  background-color: #fff;
+  background-color: var(--secondary-color);
   padding: 6rem 0;
 
   article {
@@ -49,6 +49,21 @@ const Sport = styled.section`
     width: 10%;
     margin: 1rem auto;
     border-radius: 50%;
+  }
+
+  @media (max-width: 1025px) {
+    article {
+      width: 60vw;
+      margin: 0 20vw;
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+
+    div {
+      width: 15%;
+    }
   }
 `;
 

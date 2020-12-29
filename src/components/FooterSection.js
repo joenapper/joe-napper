@@ -1,9 +1,10 @@
+// Router
+import { Link } from "react-router-dom";
 // Styled
 import styled from "styled-components";
 // Font Awesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
@@ -14,12 +15,20 @@ const FooterSection = () => {
         <div>
           <ul>
             <li>
-              <a href="https://www.linkedin.com/in/joenapper6/" target="_blank">
+              <a
+                href="https://www.linkedin.com/in/joenapper6/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Joe Napper
               </a>
             </li>
             <li>
-              <a href="mailto:joenapper.se@gmail.com" target="_blank">
+              <a
+                href="mailto:joenapper.se@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 joenapper.se@gmail.com
               </a>
             </li>
@@ -29,7 +38,11 @@ const FooterSection = () => {
           <h4>Socials</h4>
           <ul>
             <li>
-              <a href="https://www.linkedin.com/in/joenapper6/" target="_blank">
+              <a
+                href="https://www.linkedin.com/in/joenapper6/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Linkedin
               </a>
             </li>
@@ -37,6 +50,7 @@ const FooterSection = () => {
               <a
                 href="https://twitter.com/joenappercgm?lang=en"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Twitter
               </a>
@@ -47,10 +61,20 @@ const FooterSection = () => {
           <h4>Resources</h4>
           <ul>
             <li>
-              <a href="#">Articles</a>
+              <a
+                href="https://joenapper.medium.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Articles
+              </a>
             </li>
             <li>
-              <a href="https://github.com/joenapper" target="_blank">
+              <a
+                href="https://github.com/joenapper"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Github
               </a>
             </li>
@@ -60,10 +84,10 @@ const FooterSection = () => {
           <h4>Info</h4>
           <ul>
             <li>
-              <a href="#">About</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </div>
@@ -72,9 +96,27 @@ const FooterSection = () => {
         <p>&copy;Joe Napper 2020. All rights reserved.</p>
         <div>
           <p>Follow me</p>
-          <FontAwesomeIcon className="brand-icon" icon={faLinkedin} />
-          <FontAwesomeIcon className="brand-icon" icon={faTwitter} />
-          <FontAwesomeIcon className="brand-icon" icon={faGithub} />
+          <a
+            href="https://www.linkedin.com/in/joenapper6/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon className="brand-icon" icon={faLinkedin} />
+          </a>
+          <a
+            href="https://twitter.com/joenappercgm?lang=en"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon className="brand-icon" icon={faTwitter} />
+          </a>
+          <a
+            href="https://github.com/joenapper"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon className="brand-icon" icon={faGithub} />
+          </a>
         </div>
       </div>
     </Footer>
@@ -92,12 +134,12 @@ const Footer = styled.footer`
   }
 
   .top-footer {
-    background: #fff;
+    background: var(--secondary-color);
     width: 90%;
     margin: 0 5%;
     padding: 4rem 15vw;
     transform: translateY(-25%);
-    box-shadow: 1px 1px 5px 1px #ccc;
+    box-shadow: var(--custom-shadow);
 
     h4 {
       line-height: 2.3;
@@ -106,6 +148,7 @@ const Footer = styled.footer`
     a {
       line-height: 1.7;
       transition: 0.2s ease-in-out;
+      color: var(--body-text-color);
 
       &:hover {
         color: #000;
@@ -125,7 +168,7 @@ const Footer = styled.footer`
       .brand-icon {
         font-size: 1.5rem;
         margin-left: 1rem;
-        color: #333333;
+        color: var(--body-text-color);
         cursor: pointer;
         transition: 0.2s ease-in-out;
         &:hover {
@@ -142,6 +185,74 @@ const Footer = styled.footer`
     a {
       text-decoration: none;
       color: #4d4d4d;
+    }
+  }
+
+  @media (max-width: 1025px) {
+    .top-footer {
+      padding: 4rem 5vw;
+
+      h4 {
+        font-size: 1.3rem;
+      }
+
+      a {
+        font-size: 1.2rem;
+        line-height: 2;
+      }
+    }
+    .lower-footer {
+      width: 80vw;
+      margin: 0 10vw;
+      font-size: 1.2rem;
+      padding-bottom: 2rem;
+      margin-top: -1.5rem;
+
+      div {
+        .brand-icon {
+          font-size: 2rem;
+          margin-left: 1.5rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 550px) {
+    .top-footer h4,
+    .lower-footer h4 {
+      font-size: 1.1rem;
+      line-height: 2;
+    }
+
+    .top-footer a,
+    .lower-footer a {
+      font-size: 1rem;
+      line-height: 2.5;
+    }
+
+    .top-footer div:nth-child(1) {
+      display: none;
+    }
+
+    .lower-footer p {
+      font-size: 0.8rem;
+    }
+
+    .lower-footer div {
+      p {
+        display: none;
+      }
+
+      .brand-icon {
+        font-size: 1.3rem;
+        margin-left: 1.3rem;
+      }
     }
   }
 `;

@@ -1,8 +1,9 @@
+// Styled
 import styled from "styled-components";
 
 const HobbieSection = () => {
   return (
-    <Hobbie>
+    <Hobbie id="hobbies">
       <article>
         <h2>Hobbies</h2>
         <p>
@@ -11,8 +12,8 @@ const HobbieSection = () => {
           concepts for new applications and building sites from scratch.
           Investments and trading have always been a hobby of mine so I utilised
           my skills and developed a completely automated forex trading algorithm
-          which has proven to be profitable and started gaining traction with
-          very little prompting.
+          which has proven to be profitable and has the potential to help others
+          with passive income.
         </p>
       </article>
       <div></div>
@@ -21,7 +22,7 @@ const HobbieSection = () => {
 };
 
 const Hobbie = styled.section`
-  background-color: #f4f4f4;
+  background-color: var(--body-color);
   position: relative;
   padding: 6rem 0;
 
@@ -32,7 +33,7 @@ const Hobbie = styled.section`
     height: 80px;
     top: 0;
     left: 0;
-    background-color: #f4f4f4;
+    background-color: var(--body-color);
     transform: translateY(-50%) skewY(4deg);
     border-top: 1px solid rgba(204, 204, 204, 0.5);
   }
@@ -44,7 +45,7 @@ const Hobbie = styled.section`
     height: 80px;
     top: 0;
     right: 0;
-    background-color: #f4f4f4;
+    background-color: var(--body-color);
     transform: translateY(-50%) skewY(-4deg);
     border-top: 1px solid rgba(204, 204, 204, 0.5);
   }
@@ -72,6 +73,21 @@ const Hobbie = styled.section`
     width: 10%;
     margin: 1rem auto;
     border-radius: 50%;
+  }
+
+  @media (max-width: 1025px) {
+    article {
+      width: 60vw;
+      margin: 0 20vw;
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+
+    div {
+      width: 15%;
+    }
   }
 `;
 

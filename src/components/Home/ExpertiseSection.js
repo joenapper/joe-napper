@@ -1,3 +1,5 @@
+// Styled
+import styled from "styled-components";
 // Images
 import HTML from "../../media/html.png";
 import CSS from "../../media/css.png";
@@ -6,8 +8,6 @@ import JavaScript from "../../media/js.png";
 import React from "../../media/react.png";
 import Node from "../../media/node.png";
 import Python from "../../media/python.png";
-// Styled
-import styled from "styled-components";
 
 const ExpertiseSection = () => {
   return (
@@ -18,10 +18,10 @@ const ExpertiseSection = () => {
             <article>
               <h2>Expertise</h2>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Voluptate corrupti suscipit, praesentium rem aut distinctio
-                perferendis, ab modi consectetur deserunt laudantium magnam qui
-                amet vero?
+                To build great applications, not only do you need expertise in
+                the technologies you use, you also need to be versatile and have
+                the ability to adapt to new technologies and keep up with modern
+                design trends to stay ahead of your competition.
               </p>
             </article>
           </div>
@@ -42,13 +42,13 @@ const ExpertiseSection = () => {
 };
 
 const Expertise = styled.div`
-  background: #f4f4f4;
+  background: var(--body-color);
 
   .expertise-container {
     width: 90vw;
     margin-left: 10vw;
-    background: #fff;
-    box-shadow: 1px 1px 5px 1px #ccc;
+    background: var(--secondary-color);
+    box-shadow: var(--custom-shadow);
     transform: translateY(50%);
     position: relative;
 
@@ -68,6 +68,7 @@ const Expertise = styled.div`
         p {
           font-size: 1.2rem;
           line-height: 1.5;
+          text-align: left;
         }
       }
     }
@@ -81,11 +82,60 @@ const Expertise = styled.div`
       width: 50vw;
 
       img {
-        max-height: 100px;
-        max-width: 100px;
         transition: 0.2s ease-in-out;
         &:hover {
           transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1025px) {
+    .expertise-container {
+      .expertise-text {
+        article {
+          padding: 4rem 10vw 4rem 10vw;
+
+          p {
+            font-size: 1.4rem;
+          }
+        }
+      }
+
+      .expertise-icons {
+        margin-left: 10vw;
+        width: 70vw;
+      }
+    }
+  }
+
+  @media (max-width: 550px) {
+    .expertise-container {
+      width: 95vw;
+      margin-left: 5vw;
+
+      .expertise-text {
+        article {
+          padding: 2rem 5vw;
+
+          h2 {
+            font-size: 1.5rem;
+          }
+
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .expertise-icons {
+        margin-left: 5vw;
+        padding-bottom: 2rem;
+        width: 85vw;
+
+        img {
+          max-height: 44px;
+          max-width: 44px;
         }
       }
     }

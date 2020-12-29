@@ -1,8 +1,9 @@
+// Styled
 import styled from "styled-components";
 
 const VolunteerSection = () => {
   return (
-    <Volunteer>
+    <Volunteer id="volunteer">
       <article>
         <h2>Volunteer Work</h2>
         <p>
@@ -23,7 +24,7 @@ const VolunteerSection = () => {
 
 const Volunteer = styled.section`
   position: relative;
-  background-color: #fff;
+  background-color: var(--secondary-color);
   padding: 6rem 0;
   margin-bottom: -4rem;
 
@@ -34,7 +35,7 @@ const Volunteer = styled.section`
     height: 80px;
     top: 0;
     left: 0;
-    background-color: #fff;
+    background-color: var(--secondary-color);
     transform: translateY(-50%) skewY(4deg);
     border-top: 1px solid rgba(204, 204, 204, 0.5);
   }
@@ -46,7 +47,7 @@ const Volunteer = styled.section`
     height: 80px;
     top: 0;
     right: 0;
-    background-color: #fff;
+    background-color: var(--secondary-color);
     transform: translateY(-50%) skewY(-4deg);
     border-top: 1px solid rgba(204, 204, 204, 0.5);
   }
@@ -74,6 +75,21 @@ const Volunteer = styled.section`
     width: 10%;
     margin: 1rem auto;
     border-radius: 50%;
+  }
+
+  @media (max-width: 1025px) {
+    article {
+      width: 60vw;
+      margin: 0 20vw;
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+
+    div {
+      width: 15%;
+    }
   }
 `;
 

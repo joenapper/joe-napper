@@ -1,28 +1,33 @@
-import styled from "styled-components";
+// Router
 import { Link } from "react-router-dom";
+// Styled
+import styled from "styled-components";
+// Font Awesome
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
+// Components
+import Mode from "./Mode";
 
 const RightNav = ({ open }) => {
-  function mode() {
-    document.documentElement.style.setProperty("--main-color", "#282629");
-    document.documentElement.style.setProperty("--joenapper", "#f4f4f4");
-    document.documentElement.style.setProperty("--header-color", "#ccc");
-    document.documentElement.style.setProperty("--body-text-color", "#f4f4f4");
-  }
   return (
     <NavList open={open}>
       <li>
         <Link to="/about">About</Link>
       </li>
       <li>
-        <Link to="/articles">Articles</Link>
-      </li>
-      <li>
         <Link to="/contact">Contact</Link>
       </li>
       <li>
-        <a onClick={mode}>Dark Mode</a>
-        {/* <button>Dark Mode</button> */}
+        <a
+          href="https://joenapper.medium.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Articles
+          <FontAwesomeIcon className="third-party" icon={faCaretRight} />
+        </a>
       </li>
+      <Mode />
     </NavList>
   );
 };
@@ -30,23 +35,18 @@ const RightNav = ({ open }) => {
 const NavList = styled.ul`
   list-style: none;
   display: flex;
+  align-items: center;
 
   li {
     margin-left: 3rem;
 
-    /* &:nth-child(4) {
-      background-color: green;
-    } */
-
     a {
-      text-decoration: none;
-
       &::after {
         content: "";
         display: block;
         width: 0;
         height: 2px;
-        background-color: #fdda3e;
+        background-color: var(--main-color);
         transition: width 0.4s;
       }
 
@@ -55,16 +55,40 @@ const NavList = styled.ul`
       }
     }
 
+    &:nth-child(3) {
+      a {
+        display: flex;
+        align-items: center;
+
+        .third-party {
+          margin-left: 0.2rem;
+          font-size: 1.5rem;
+          opacity: 0;
+          transition: 0.2s ease-in-out;
+        }
+      }
+
+      &:hover {
+        .third-party {
+          opacity: 1;
+        }
+      }
+    }
+
+    svg {
+      cursor: pointer;
+    }
+
     button {
       background-color: transparent;
     }
   }
-
   @media (max-width: 768px) {
     flex-direction: column;
     justify-content: space-around;
     text-align: center;
-    background-color: #ccc;
+    background-color: var(--secondary-color);
+    box-shadow: var(--custom-shadow);
     position: fixed;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     top: 0;
@@ -75,6 +99,15 @@ const NavList = styled.ul`
 
     li {
       margin: 0;
+
+      &:nth-child(3) {
+        a {
+          .third-party {
+            margin-left: 0.4rem;
+            opacity: 1;
+          }
+        }
+      }
     }
   }
 `;

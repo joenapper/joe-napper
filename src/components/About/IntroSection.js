@@ -1,5 +1,8 @@
+// Styled
 import styled from "styled-components";
-import CSS from "../../media/css.png";
+// Font Awesome
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLevelDownAlt } from "@fortawesome/free-solid-svg-icons";
 
 const IntroSection = () => {
   return (
@@ -11,13 +14,30 @@ const IntroSection = () => {
           develop the next version of the highly anticipated Rubi CRM system and
           manage over a dozen client portals with Rubi integration.
         </p>
-        {/* <div>
-          <img src={CSS} alt="Me" />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
-            consequuntur quis.
-          </p>
-        </div> */}
+        <div>
+          <ul>
+            <li>
+              <FontAwesomeIcon className="icon-flipped" icon={faLevelDownAlt} />
+              <a href="#sports">Sports Coaching</a>
+            </li>
+            <li>
+              <FontAwesomeIcon className="icon-flipped" icon={faLevelDownAlt} />
+              <a href="#coding">Intro to Coding</a>
+            </li>
+            <li>
+              <FontAwesomeIcon className="icon-flipped" icon={faLevelDownAlt} />
+              <a href="#experience">Commercial Experience</a>
+            </li>
+            <li>
+              <FontAwesomeIcon className="icon-flipped" icon={faLevelDownAlt} />
+              <a href="#hobbies">Hobbies</a>
+            </li>
+            <li>
+              <FontAwesomeIcon className="icon-flipped" icon={faLevelDownAlt} />
+              <a href="#volunteer">Volunteer Work</a>
+            </li>
+          </ul>
+        </div>
       </article>
     </Intro>
   );
@@ -27,35 +47,53 @@ const Intro = styled.div`
   background: var(--main-color);
   height: 60vh;
   display: flex;
-  justify-content: center;
   align-items: center;
 
   article {
     width: 60vw;
     margin: 0 20vw;
     display: flex;
+    justify-content: space-between;
 
     .intro {
       width: 60%;
       font-size: 1.5rem;
       line-height: 1.5;
       letter-spacing: 2px;
-      /* flex-grow: 1; */
     }
 
     div {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      justify-content: flex-end;
       width: 40%;
-      margin-left: 1rem;
 
-      img {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        background-color: green;
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: right;
+
+        li {
+          transition: 0.2s ease-in-out;
+
+          &:hover {
+            transform: scale(1.1);
+            color: #000;
+          }
+
+          .icon-flipped {
+            transform: scaleX(-1);
+            -moz-transform: scaleX(-1);
+            -webkit-transform: scaleX(-1);
+            -ms-transform: scaleX(-1);
+            margin-right: 1rem;
+          }
+
+          a {
+            font-size: 1.4rem;
+          }
+        }
       }
     }
   }

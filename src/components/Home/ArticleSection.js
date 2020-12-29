@@ -11,27 +11,46 @@ const ArticleSection = () => {
           years.....
         </p>
         <div className="cards">
-          <div className="card">
-            <h4>6 Simple Typography Tips</h4>
+          <a
+            href="https://joenapper.medium.com/optimise-your-css-with-shorthand-properties-927e08b6afae"
+            target="_blank"
+            rel="noreferrer"
+            className="card"
+          >
+            <h4>Optimise Your CSS With Shorthand Properties!</h4>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi unde
-              architecto nam ea nihil quibusdam omnis velit, vel eum iste.
+              We use shorthand properties to set the values of multiple CSS
+              properties simultaneously, resulting in more optimised and
+              efficient code...
             </p>
-          </div>
-          <div className="card">
-            <h4>How To Start Coding?</h4>
+            <p>Read More</p>
+          </a>
+          <a
+            href="https://joenapper.medium.com/why-you-should-be-using-css-variables-3989c92e200f"
+            target="_blank"
+            rel="noreferrer"
+            className="card"
+          >
+            <h4>Why you should be using CSS Variables!</h4>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi unde
-              architecto nam ea nihil quibusdam omnis velit, vel eum iste.
+              The use of CSS Variables allows us as developers to instantly
+              update a property value throughout our entire application...
             </p>
-          </div>
-          <div className="card">
-            <h4>querySelector vs. getElementById</h4>
+            <p>Read More</p>
+          </a>
+          <a
+            href="https://joenapper.medium.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="card"
+          >
+            <h4>See All</h4>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi unde
-              architecto nam ea nihil quibusdam omnis velit, vel eum iste.
+              Check out my full list of articles over on Medium. I talk about
+              design principles and share my knowledge with fellow devs.
             </p>
-          </div>
+            <p>See All</p>
+          </a>
         </div>
       </div>
     </Article>
@@ -40,12 +59,13 @@ const ArticleSection = () => {
 
 const Article = styled.div`
   background: var(--main-color);
-  height: 60vh;
 
   .container {
+    height: 100%;
     width: 50vw;
     margin: 0 25vw;
     text-align: center;
+    position: relative;
 
     h2 {
       font-size: 2rem;
@@ -55,21 +75,30 @@ const Article = styled.div`
 
     p {
       font-size: 1.2rem;
-      padding-bottom: 2rem;
+      padding-bottom: 15rem;
     }
 
     .cards {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-gap: 2rem;
-      transform: translateY(10%);
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      position: absolute;
+      bottom: 0;
+      transform: translateY(25%);
 
       .card {
-        background-color: #fff;
-        height: 200px;
-        box-shadow: 1px 1px 5px 1px #ccc;
+        background-color: var(--secondary-color);
+        width: 100%;
+        box-shadow: var(--custom-shadow);
         position: relative;
         padding: 1rem;
+        cursor: pointer;
+        transition: 0.15s ease-in-out;
+
+        &:hover {
+          transform: scale(1.1);
+          box-shadow: 1px 1px 5px 1px #000;
+        }
 
         h4 {
           font-size: 1.2rem;
@@ -82,16 +111,77 @@ const Article = styled.div`
 
         p {
           font-size: 1rem;
+          padding-bottom: 2rem;
         }
+      }
+    }
+  }
 
-        img {
-          transition: 0.3s ease-in-out;
-          position: absolute;
-          bottom: 0;
-          right: 0;
-          transform: translate(-100%, 50%);
-          &:hover {
-            transform: translate(-50%, 50%) scale(1.5);
+  @media (max-width: 1635px) {
+    .container {
+      p {
+        padding-bottom: 32.5rem;
+      }
+      .cards {
+        flex-direction: column;
+      }
+    }
+  }
+
+  @media (max-width: 1025px) {
+    .container {
+      width: 60vw;
+      margin: 0 20vw;
+
+      p {
+        font-size: 1.4rem;
+        padding-bottom: 40rem;
+      }
+
+      .cards {
+        .card {
+          h4 {
+            font-size: 1.5rem;
+          }
+
+          p {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1025px) {
+    .container {
+      p {
+        padding-bottom: 42.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 550px) {
+    .container {
+      h2 {
+        padding-top: 17.5rem;
+      }
+
+      p {
+        padding-bottom: 40rem;
+        font-size: 1.1rem;
+      }
+
+      .cards {
+        transform: translateY(15%);
+
+        .card {
+          h4 {
+            font-size: 1.2rem;
+          }
+
+          p {
+            font-size: 1rem;
+            padding-bottom: 1rem;
           }
         }
       }

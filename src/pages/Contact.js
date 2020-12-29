@@ -1,7 +1,10 @@
+// Components
+import ContactSection from "../components/Home/ContactSection";
+
 const Contact = () => {
   return (
     <main>
-      <h1>Contact</h1>
+      <ContactSection />
     </main>
   );
 };
