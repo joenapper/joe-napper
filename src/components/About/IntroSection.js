@@ -162,6 +162,68 @@ const Intro = styled.div`
       }
     }
   }
+
+  @media (max-width: 1025px) {
+    article {
+      width: 80vw;
+      margin: 0 10vw;
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: 90vh;
+
+    article {
+      flex-direction: column;
+      gap: 2rem;
+
+      .intro {
+        width: 100%;
+        font-size: 1.5rem;
+        line-height: 1.5;
+        letter-spacing: 2px;
+      }
+
+      div {
+        justify-content: center;
+        width: 100%;
+
+        ul {
+          li {
+            margin-top: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 550px) {
+    height: 80vh;
+
+    article {
+      width: 90vw;
+      margin: 0 5vw;
+
+      .intro {
+        font-size: 1.2rem;
+        text-align: justify;
+      }
+
+      div {
+        ul {
+          li {
+            a {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 400px) {
+    height: 90vh;
+  }
 `;
 
 export default IntroSection;

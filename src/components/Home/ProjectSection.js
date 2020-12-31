@@ -93,10 +93,15 @@ const Projects = styled(motion.div)`
   }
 
   @media (max-width: 550px) {
+    h2 {
+      font-size: 2rem;
+    }
+
     .cards {
       display: flex;
       flex-direction: column;
-      grid-gap: 1rem;
+      /* grid-gap: 1rem; */
+      gap: 2rem;
     }
   }
 `;

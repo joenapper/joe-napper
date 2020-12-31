@@ -89,8 +89,8 @@ const Volunteer = styled.section`
 
   @media (max-width: 1025px) {
     article {
-      width: 60vw;
-      margin: 0 20vw;
+      width: 70vw;
+      margin: 0 15vw;
 
       p {
         font-size: 1.2rem;
@@ -99,6 +99,28 @@ const Volunteer = styled.section`
 
     div {
       width: 15%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    article {
+      width: 80vw;
+      margin: 0 10vw;
+    }
+  }
+
+  @media (max-width: 400px) {
+    article {
+      width: 90vw;
+      margin: 0 5vw;
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
     }
   }
 `;

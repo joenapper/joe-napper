@@ -54,7 +54,9 @@ const Hero = styled.article`
     height: 80vh;
 
     div {
+      width: 90vw;
       margin-top: -10rem;
+
       span {
         font-size: 1rem;
       }

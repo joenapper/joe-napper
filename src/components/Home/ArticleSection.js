@@ -135,6 +135,7 @@ const Article = styled.div`
       }
       .cards {
         flex-direction: column;
+        gap: 1rem;
       }
     }
   }
@@ -173,6 +174,9 @@ const Article = styled.div`
 
   @media (max-width: 550px) {
     .container {
+      width: 70vw;
+      margin: 0 15vw;
+
       h2 {
         padding-top: 17.5rem;
       }
@@ -195,6 +199,14 @@ const Article = styled.div`
             padding-bottom: 1rem;
           }
         }
+      }
+    }
+  }
+
+  @media (max-width: 395px) {
+    .container {
+      p {
+        padding-bottom: 42.5rem;
       }
     }
   }
