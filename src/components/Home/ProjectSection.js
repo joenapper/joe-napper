@@ -100,8 +100,6 @@ const Projects = styled(motion.div)`
     .cards {
       display: flex;
       flex-direction: column;
-      /* grid-gap: 1rem; */
-      gap: 2rem;
     }
   }
 `;
@@ -132,6 +130,10 @@ const Card = styled.a`
     &:nth-child(4) {
       display: none;
     }
+  }
+
+  @media (max-width: 550px) {
+    margin-bottom: 1rem;
   }
 `;
 

@@ -130,12 +130,11 @@ const Article = styled.div`
 
   @media (max-width: 1635px) {
     .container {
+      width: 60vw;
+      margin: 0 20vw;
+
       p {
         padding-bottom: 32.5rem;
-      }
-      .cards {
-        flex-direction: column;
-        gap: 1rem;
       }
     }
   }
@@ -151,6 +150,9 @@ const Article = styled.div`
       }
 
       .cards {
+        flex-direction: column;
+        margin-bottom: 1rem;
+
         .card {
           h4 {
             font-size: 1.5rem;
@@ -168,6 +170,22 @@ const Article = styled.div`
     .container {
       p {
         padding-bottom: 42.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      p {
+        padding-bottom: 44rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      p {
+        padding-bottom: 47.5rem;
       }
     }
   }
@@ -203,10 +221,18 @@ const Article = styled.div`
     }
   }
 
-  @media (max-width: 395px) {
+  @media (max-width: 430px) {
     .container {
       p {
         padding-bottom: 42.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 395px) {
+    .container {
+      p {
+        padding-bottom: 44.5rem;
       }
     }
   }
