@@ -10,6 +10,8 @@ import ContactSection from "../components/Home/ContactSection";
 import { motion } from "framer-motion";
 import { pageAnimation } from "../animation";
 import ScrollTop from "../components/ScrollTop";
+// Helmet
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
   return (
@@ -19,6 +21,13 @@ const About = () => {
       animate="show"
       exit="exit"
     >
+      <Helmet>
+        <title>Joe Napper - About</title>
+        <meta
+          name="description"
+          content="Web developer currently working on the next generation of CRM systems for CMIS-UK."
+        />
+      </Helmet>
       <IntroSection />
       <SportingSection />
       <CodingSection />

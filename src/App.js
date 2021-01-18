@@ -11,21 +11,11 @@ import Contact from "./pages/Contact";
 import { Switch, Route, useLocation } from "react-router-dom";
 // Animation
 import { AnimatePresence } from "framer-motion";
-// Helmet
-import { Helmet } from "react-helmet-async";
 
 function App() {
   const location = useLocation();
   return (
     <div className="App">
-      <Helmet>
-        <meta charset="utf-8" />
-        <title>Joe Napper | Web Developer</title>
-        <meta
-          name="description"
-          content="Full stack web developer currently working on the next generation of CRM systems for CMIS-UK."
-        />
-      </Helmet>
       <GlobalStyle />
       <Navbar />
 

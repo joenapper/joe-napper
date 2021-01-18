@@ -151,9 +151,10 @@ const Article = styled.div`
 
       .cards {
         flex-direction: column;
-        margin-bottom: 1rem;
 
         .card {
+          margin-bottom: 1rem;
+
           h4 {
             font-size: 1.5rem;
           }
