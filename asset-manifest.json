@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/static/js/main.4ac34ffa.chunk.js",
-    "main.js.map": "/static/js/main.4ac34ffa.chunk.js.map",
+    "main.js": "/static/js/main.b7012807.chunk.js",
+    "main.js.map": "/static/js/main.b7012807.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.dc2dd28e.js",
     "runtime-main.js.map": "/static/js/runtime-main.dc2dd28e.js.map",
-    "static/js/2.96f84b8a.chunk.js": "/static/js/2.96f84b8a.chunk.js",
-    "static/js/2.96f84b8a.chunk.js.map": "/static/js/2.96f84b8a.chunk.js.map",
+    "static/js/2.af822230.chunk.js": "/static/js/2.af822230.chunk.js",
+    "static/js/2.af822230.chunk.js.map": "/static/js/2.af822230.chunk.js.map",
     "static/js/3.285737e9.chunk.js": "/static/js/3.285737e9.chunk.js",
     "static/js/3.285737e9.chunk.js.map": "/static/js/3.285737e9.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.96f84b8a.chunk.js.LICENSE.txt": "/static/js/2.96f84b8a.chunk.js.LICENSE.txt",
+    "static/js/2.af822230.chunk.js.LICENSE.txt": "/static/js/2.af822230.chunk.js.LICENSE.txt",
     "static/media/ClockworkMedia.0c42b608.png": "/static/media/ClockworkMedia.0c42b608.png",
     "static/media/CodeInstitute.ec32400e.png": "/static/media/CodeInstitute.ec32400e.png",
     "static/media/GitHub.86369905.png": "/static/media/GitHub.86369905.png",
@@ -18,7 +18,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.dc2dd28e.js",
-    "static/js/2.96f84b8a.chunk.js",
-    "static/js/main.4ac34ffa.chunk.js"
+    "static/js/2.af822230.chunk.js",
+    "static/js/main.b7012807.chunk.js"
   ]
 }
