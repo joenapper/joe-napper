@@ -35,11 +35,7 @@ const ProjectSection = () => {
         >
           <img src={HungryCobra} alt="Hungry Cobra" />
         </Card>
-        <Card
-          href="https://joenapper.github.io/under-maintenance/"
-          target="_blank"
-          className="card"
-        >
+        <Card href="https://nappernetwork.com" target="_blank" className="card">
           <img src={NapperNetwork} alt="Napper Network" />
         </Card>
         <Card
@@ -47,7 +43,7 @@ const ProjectSection = () => {
           target="_blank"
           className="card"
         >
-          <img src={GitHub} alt="mechanized" />
+          <img src={GitHub} alt="GitHub" />
         </Card>
         <Card
           href="https://codeinstitute.net/"
@@ -118,9 +114,9 @@ const Card = styled.a`
     margin-bottom: 1rem;
     max-height: 100%;
 
-    &:nth-child(6),
-    &:nth-child(5),
-    &:nth-child(4) {
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(6) {
       display: none;
     }
   }
