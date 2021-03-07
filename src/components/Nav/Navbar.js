@@ -32,7 +32,7 @@ const Navbar = () => {
 const Header = styled.header`
   width: 100vw;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   transition: all 0.1s ease-in-out;
   background: ${({ navbar }) =>
     navbar ? "var(--secondary-color)" : "transparent"};

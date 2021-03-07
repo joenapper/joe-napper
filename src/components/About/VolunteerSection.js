@@ -36,7 +36,6 @@ const Volunteer = styled.section`
   position: relative;
   background-color: var(--secondary-color);
   padding: 6rem 0;
-  margin-bottom: -4rem;
 
   &::before {
     position: absolute;

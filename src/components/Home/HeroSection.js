@@ -26,6 +26,7 @@ const Hero = styled.article`
   div {
     text-align: center;
     width: 60vw;
+    padding-bottom: 8vh;
 
     .role {
       letter-spacing: 3px;
@@ -46,16 +47,28 @@ const Hero = styled.article`
     }
   }
 
-  @media (max-width: 1025px) {
-    height: 70vh;
+  @media (max-width: 925px) {
+    div {
+      padding-bottom: calc(8vh + 4rem);
+    }
+  }
+
+  @media (max-width: 750px) {
+    div {
+      padding-bottom: calc(8vh + 4rem);
+
+      h1 {
+        font-size: 3rem;
+      }
+    }
   }
 
   @media (max-width: 550px) {
-    height: 80vh;
+    height: 60vh;
 
     div {
       width: 90vw;
-      margin-top: -10rem;
+      padding-bottom: 8vh;
 
       span {
         font-size: 1rem;
@@ -63,18 +76,6 @@ const Hero = styled.article`
 
       h1 {
         font-size: 2.5rem;
-      }
-    }
-  }
-
-  @media (max-width: 466px) {
-    height: 60vh;
-
-    div {
-      margin-top: -7rem;
-
-      h1 {
-        font-size: 2.1rem;
       }
     }
   }

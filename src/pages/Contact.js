@@ -6,10 +6,12 @@ import { pageAnimation } from "../animation";
 import ScrollTop from "../components/ScrollTop";
 // Helmet
 import { Helmet } from "react-helmet-async";
+// Styled
+import styled from "styled-components";
 
 const Contact = () => {
   return (
-    <motion.main
+    <PrimaryContact
       variants={pageAnimation}
       initial="hidden"
       animate="show"
@@ -24,8 +26,19 @@ const Contact = () => {
       </Helmet>
       <ContactSection />
       <ScrollTop />
-    </motion.main>
+    </PrimaryContact>
   );
 };
+
+const PrimaryContact = styled(motion.main)`
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 425px) {
+    height: 70vh;
+  }
+`;
 
 export default Contact;

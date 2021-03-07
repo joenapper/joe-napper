@@ -63,7 +63,7 @@ const ProjectSection = () => {
 
 const Projects = styled(motion.div)`
   width: 50vw;
-  margin: 0 25vw;
+  margin: 0 25vw 4rem 25vw;
   text-align: center;
 
   h2 {
@@ -78,21 +78,7 @@ const Projects = styled(motion.div)`
     grid-gap: 2rem;
   }
 
-  @media (max-width: 1025px) {
-    width: 70vw;
-    margin: 0 15vw;
-
-    .cards {
-      grid-gap: 1.2rem 1rem;
-    }
-  }
-
-  @media (max-width: 768px) {
-    width: 70vw;
-    margin: 0 15vw;
-  }
-
-  @media (max-width: 550px) {
+  @media (max-width: 1250px) {
     h2 {
       font-size: 2rem;
     }
@@ -101,6 +87,11 @@ const Projects = styled(motion.div)`
       display: flex;
       flex-direction: column;
     }
+  }
+
+  @media (max-width: 550px) {
+    width: 70vw;
+    margin: 0 15vw 4rem 15vw;
   }
 `;
 
@@ -113,7 +104,6 @@ const Card = styled.a`
 
   img {
     width: 100%;
-    /* max-height: 250px; */
     height: 100%;
     object-fit: revert;
     border-radius: 0.1rem;
@@ -124,16 +114,15 @@ const Card = styled.a`
     box-shadow: 1px 1px 5px 1px #000;
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 1250px) {
+    margin-bottom: 1rem;
+    max-height: 100%;
+
     &:nth-child(6),
     &:nth-child(5),
     &:nth-child(4) {
       display: none;
     }
-  }
-
-  @media (max-width: 550px) {
-    margin-bottom: 1rem;
   }
 `;
 

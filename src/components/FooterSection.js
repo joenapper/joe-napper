@@ -11,6 +11,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 const FooterSection = () => {
   return (
     <Footer>
+      <div className="bg-split"></div>
       <div className="top-footer">
         <div>
           <ul>
@@ -125,6 +126,15 @@ const FooterSection = () => {
 
 const Footer = styled.footer`
   background: var(--main-color);
+  position: relative;
+
+  .bg-split {
+    height: 25%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: var(--body-color);
+  }
 
   .top-footer,
   .lower-footer {
@@ -138,8 +148,9 @@ const Footer = styled.footer`
     width: 90%;
     margin: 0 5%;
     padding: 4rem 15vw;
-    transform: translateY(-25%);
     box-shadow: var(--custom-shadow);
+    position: relative;
+    z-index: 1;
 
     h4 {
       line-height: 2.3;
@@ -157,7 +168,7 @@ const Footer = styled.footer`
   }
 
   .lower-footer {
-    padding-bottom: 1rem;
+    padding: 1rem 0rem;
     width: 60vw;
     margin: 0 20vw;
 
@@ -206,7 +217,6 @@ const Footer = styled.footer`
       margin: 0 10vw;
       font-size: 1.2rem;
       padding-bottom: 2rem;
-      margin-top: -1.5rem;
 
       div {
         .brand-icon {

@@ -64,12 +64,23 @@ const ArticleSection = () => {
           </a>
         </motion.div>
       </div>
+      <div className="bg-split"></div>
     </Article>
   );
 };
 
 const Article = styled.div`
   background: var(--main-color);
+  padding-top: 4rem;
+  position: relative;
+
+  .bg-split {
+    position: absolute;
+    height: 15%;
+    width: 100%;
+    bottom: 0;
+    background-color: var(--body-color);
+  }
 
   .container {
     height: 100%;
@@ -77,25 +88,22 @@ const Article = styled.div`
     margin: 0 25vw;
     text-align: center;
     position: relative;
+    z-index: 1;
 
     h2 {
       font-size: 2rem;
-      padding-top: 20rem;
-      padding-bottom: 1rem;
+      margin-bottom: 1rem;
     }
 
     p {
       font-size: 1.2rem;
-      padding-bottom: 15rem;
+      margin-bottom: 2rem;
     }
 
     .cards {
       display: flex;
       justify-content: space-between;
       gap: 2rem;
-      position: absolute;
-      bottom: 0;
-      transform: translateY(25%);
 
       .card {
         background-color: var(--secondary-color);
@@ -128,25 +136,10 @@ const Article = styled.div`
     }
   }
 
-  @media (max-width: 1635px) {
+  @media (max-width: 1250px) {
     .container {
-      width: 60vw;
-      margin: 0 20vw;
-
-      p {
-        padding-bottom: 32.5rem;
-      }
-    }
-  }
-
-  @media (max-width: 1025px) {
-    .container {
-      width: 60vw;
-      margin: 0 20vw;
-
       p {
         font-size: 1.4rem;
-        padding-bottom: 40rem;
       }
 
       .cards {
@@ -156,58 +149,33 @@ const Article = styled.div`
           margin-bottom: 1rem;
 
           h4 {
+            padding-top: 2rem;
             font-size: 1.5rem;
           }
 
           p {
             font-size: 1.2rem;
+            padding-bottom: 0;
           }
         }
       }
     }
   }
 
-  @media (max-width: 1025px) {
-    .container {
-      p {
-        padding-bottom: 42.5rem;
-      }
-    }
-  }
-
-  @media (max-width: 768px) {
-    .container {
-      p {
-        padding-bottom: 44rem;
-      }
-    }
-  }
-
-  @media (max-width: 768px) {
-    .container {
-      p {
-        padding-bottom: 47.5rem;
-      }
-    }
-  }
-
   @media (max-width: 550px) {
+    .bg-split {
+      height: 7.5%;
+    }
+
     .container {
       width: 70vw;
       margin: 0 15vw;
 
-      h2 {
-        padding-top: 17.5rem;
-      }
-
       p {
-        padding-bottom: 40rem;
         font-size: 1.1rem;
       }
 
       .cards {
-        transform: translateY(15%);
-
         .card {
           h4 {
             font-size: 1.2rem;
@@ -215,25 +183,8 @@ const Article = styled.div`
 
           p {
             font-size: 1rem;
-            padding-bottom: 1rem;
           }
         }
-      }
-    }
-  }
-
-  @media (max-width: 430px) {
-    .container {
-      p {
-        padding-bottom: 42.5rem;
-      }
-    }
-  }
-
-  @media (max-width: 395px) {
-    .container {
-      p {
-        padding-bottom: 44.5rem;
       }
     }
   }

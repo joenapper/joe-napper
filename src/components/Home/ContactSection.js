@@ -1,9 +1,9 @@
 // Styled
 import styled from "styled-components";
 
-const ContactSection = () => {
+const ContactSection = ({ primary }) => {
   return (
-    <Contact>
+    <Contact primary={primary}>
       <h2>Get In Touch</h2>
       <form>
         <div className="row">
@@ -24,10 +24,9 @@ const ContactSection = () => {
 };
 
 const Contact = styled.div`
-  padding-top: 15rem;
-  padding-bottom: 15rem;
   width: 30vw;
-  margin: 0 35vw;
+  margin: 0rem 35vw 6rem 35vw;
+  padding-top: 4rem;
   text-align: center;
 
   h2 {
@@ -111,10 +110,13 @@ const Contact = styled.div`
     }
   }
 
-  @media (max-width: 1025px) {
+  @media (max-width: 1250px) {
     width: 60vw;
-    margin: 0 20vw;
+    margin: 0rem 20vw;
+    padding: 4rem 0rem;
+  }
 
+  @media (max-width: 1025px) {
     form {
       input,
       textarea {
@@ -128,8 +130,8 @@ const Contact = styled.div`
   }
 
   @media (max-width: 550px) {
-    padding-top: 12rem;
-    padding-bottom: 10rem;
+    width: 70vw;
+    margin: 0rem 15vw;
 
     h2 {
       font-size: 2rem;
@@ -154,6 +156,11 @@ const Contact = styled.div`
         }
       }
     }
+  }
+
+  @media (max-width: 320px) {
+    width: 80vw;
+    margin: 0rem 10vw;
   }
 `;
 

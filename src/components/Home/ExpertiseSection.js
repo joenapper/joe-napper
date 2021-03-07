@@ -36,6 +36,7 @@ const ExpertiseSection = () => {
             <img src={Python} alt="Python" />
           </div>
         </div>
+        <div className="bg-split"></div>
       </Expertise>
     </div>
   );
@@ -43,14 +44,23 @@ const ExpertiseSection = () => {
 
 const Expertise = styled.div`
   background: var(--body-color);
+  position: relative;
+
+  .bg-split {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    bottom: 0;
+    background: var(--main-color);
+  }
 
   .expertise-container {
     width: 90vw;
     margin-left: 10vw;
     background: var(--secondary-color);
     box-shadow: var(--custom-shadow);
-    transform: translateY(50%);
     position: relative;
+    z-index: 1;
 
     .expertise-text {
       display: flex;
