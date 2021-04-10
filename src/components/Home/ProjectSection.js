@@ -59,7 +59,7 @@ const ProjectSection = () => {
 
 const Projects = styled(motion.div)`
   width: 50vw;
-  margin: 0 25vw 4rem 25vw;
+  margin: 4rem 25vw 4rem 25vw;
   text-align: center;
 
   h2 {
@@ -87,7 +87,7 @@ const Projects = styled(motion.div)`
 
   @media (max-width: 550px) {
     width: 70vw;
-    margin: 0 15vw 4rem 15vw;
+    margin: 4rem 15vw 4rem 15vw;
   }
 `;
 

@@ -12,8 +12,8 @@ const ArticleSection = () => {
       <div className="container">
         <h2>Articles</h2>
         <p>
-          I like to write short articles on tips and tricks ive learned over the
-          years.....
+          I like to write short articles on tips and tricks I've learned over
+          the years.....
         </p>
         <motion.div
           className="cards"
@@ -84,8 +84,8 @@ const Article = styled.div`
 
   .container {
     height: 100%;
-    width: 50vw;
-    margin: 0 25vw;
+    width: 60vw;
+    margin: 0 20vw;
     text-align: center;
     position: relative;
     z-index: 1;
@@ -138,6 +138,9 @@ const Article = styled.div`
 
   @media (max-width: 1250px) {
     .container {
+      width: 50vw;
+      margin: 0 25vw;
+
       p {
         font-size: 1.4rem;
       }

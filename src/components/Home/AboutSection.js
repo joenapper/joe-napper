@@ -28,7 +28,16 @@ const AboutSection = () => {
 
 const About = styled.div`
   background: var(--body-color);
-  height: 25vh;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 50%;
+    background-color: var(--main-color);
+  }
 
   div {
     display: flex;
@@ -36,7 +45,6 @@ const About = styled.div`
     width: 90vw;
     background: var(--secondary-color);
     box-shadow: var(--custom-shadow);
-    transform: translateY(-50%);
     position: relative;
 
     article {
@@ -88,17 +96,7 @@ const About = styled.div`
     }
   }
 
-  @media (max-width: 952px) {
-    height: 30vh;
-  }
-
-  @media (max-width: 661px) {
-    height: 32.5vh;
-  }
-
   @media (max-width: 550px) {
-    height: 20vh;
-
     div {
       width: 95vw;
 
@@ -119,10 +117,6 @@ const About = styled.div`
         font-size: 1rem;
       }
     }
-  }
-
-  @media (max-width: 448px) {
-    height: 25vh;
   }
 `;
 

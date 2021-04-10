@@ -18,7 +18,7 @@ const HeroSection = () => {
 
 const Hero = styled.article`
   background: var(--main-color);
-  height: 80vh;
+  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +26,6 @@ const Hero = styled.article`
   div {
     text-align: center;
     width: 60vw;
-    padding-bottom: 8vh;
 
     .role {
       letter-spacing: 3px;
@@ -47,28 +46,17 @@ const Hero = styled.article`
     }
   }
 
-  @media (max-width: 925px) {
-    div {
-      padding-bottom: calc(8vh + 4rem);
-    }
-  }
-
   @media (max-width: 750px) {
-    div {
-      padding-bottom: calc(8vh + 4rem);
-
-      h1 {
-        font-size: 3rem;
-      }
+    h1 {
+      font-size: 3rem;
     }
   }
 
   @media (max-width: 550px) {
-    height: 60vh;
+    height: 50vh;
 
     div {
       width: 90vw;
-      padding-bottom: 8vh;
 
       span {
         font-size: 1rem;
