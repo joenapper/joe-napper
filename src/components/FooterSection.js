@@ -94,7 +94,7 @@ const FooterSection = () => {
         </div>
       </div>
       <div className="lower-footer">
-        <p>&copy;Joe Napper 2020. All rights reserved.</p>
+        <p>&copy;Joe Napper {new Date().getFullYear()}. All rights reserved.</p>
         <div>
           <p>Follow me</p>
           <a
