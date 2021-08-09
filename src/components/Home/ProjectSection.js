@@ -1,12 +1,12 @@
 // Styled
 import styled from "styled-components";
 // Images
-import Clockwork from "../../media/ClockworkMedia.png";
-import Rubi from "../../media/Rubi.png";
-import HungryCobra from "../../media/HungryCobra.png";
-import NapperNetwork from "../../media/NapperNetwork.png";
-import GitHub from "../../media/GitHub.png";
-import CodeInstitute from "../../media/CodeInstitute.png";
+import Clockwork from "../../media/ClockworkMedia-min.png";
+import OutdoorRevive from "../../media/OutdoorRevive-min.jpg";
+import DemachiClothing from "../../media/DemachiClothing-min.jpg";
+import SaskiaErhardt from "../../media/SaskiaErhardt-min.png";
+import NapperNetwork from "../../media/NapperNetwork-min.png";
+import GitHub from "../../media/GitHub-min.png";
 // Animations
 import { fade } from "../../animation";
 import { useScroll } from "../useScroll";
@@ -25,19 +25,27 @@ const ProjectSection = () => {
         >
           <img src={Clockwork} alt="Clockwork Media" />
         </Card>
-        <Card href="https://www.rubicrm.net/" target="_blank" className="card">
-          <img src={Rubi} alt="Rubi CRM" />
-        </Card>
+
         <Card
-          href="https://www.eukhost.com/?gclid=CjwKCAiAxKv_BRBdEiwAyd40N72rR3Rw6cVe7-Rfcuz68jM75tumcnPch9cGa9DaITOTiu79T9dCpxoCKzoQAvD_BwE"
+          href="https://demachiclothing.co.uk/"
           target="_blank"
           className="card"
         >
-          <img src={HungryCobra} alt="Hungry Cobra" />
+          <img src={DemachiClothing} alt="Demachi Clothing" />
         </Card>
+
+        <Card
+          href="https://www.saskiaerhardt.com"
+          target="_blank"
+          className="card"
+        >
+          <img src={SaskiaErhardt} alt="Saskia Erhardt" />
+        </Card>
+
         <Card href="https://nappernetwork.com" target="_blank" className="card">
           <img src={NapperNetwork} alt="Napper Network" />
         </Card>
+
         <Card
           href="https://github.com/joenapper"
           target="_blank"
@@ -45,12 +53,13 @@ const ProjectSection = () => {
         >
           <img src={GitHub} alt="GitHub" />
         </Card>
+
         <Card
-          href="https://codeinstitute.net/"
+          href="https://outdoor-revive.co.uk/"
           target="_blank"
           className="card"
         >
-          <img src={CodeInstitute} alt="Code Institute" />
+          <img src={OutdoorRevive} alt="Outdoor Revive" />
         </Card>
       </div>
     </Projects>
