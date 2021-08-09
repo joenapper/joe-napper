@@ -91,6 +91,7 @@ const Expertise = styled.div`
 
       img {
         transition: 0.2s ease-in-out;
+
         &:hover {
           transform: scale(1.1);
         }
