@@ -1,13 +1,12 @@
 // Styled
 import styled from "styled-components";
 // Images
-import HTML from "../../media/html.png";
-import CSS from "../../media/css.png";
-import Sass from "../../media/sass.png";
-import JavaScript from "../../media/js.png";
-import React from "../../media/react.png";
-import Node from "../../media/node.png";
-import Python from "../../media/python.png";
+import HTML from "../../media/html-min.png";
+import CSS from "../../media/css-min.png";
+import Sass from "../../media/sass-min.png";
+import JavaScript from "../../media/js-min.png";
+import React from "../../media/react-min.png";
+import Next from "../../media/next-min.png";
 
 const ExpertiseSection = () => {
   return (
@@ -31,9 +30,8 @@ const ExpertiseSection = () => {
             <img src={CSS} alt="CSS" />
             <img src={Sass} alt="Sass" />
             <img src={JavaScript} alt="JavaScript" />
-            <img src={React} alt="React" />
-            <img src={Node} alt="Node.js" />
-            <img src={Python} alt="Python" />
+            <img src={React} alt="React js" />
+            <img src={Next} alt="Next js" />
           </div>
         </div>
         <div className="bg-split"></div>
