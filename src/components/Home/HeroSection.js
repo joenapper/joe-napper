@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <Hero>
       <div>
-        <span className="role">- Frontend Developer -</span>
+        <span className="role">- Senior Frontend Developer -</span>
         <h1>&#60; JoeNapper /&#62;</h1>
         <span>
           Building high end applications from the ground up using modern
