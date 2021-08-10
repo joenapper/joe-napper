@@ -12,9 +12,6 @@ const RightNav = ({ open }) => {
   return (
     <NavList open={open}>
       <li>
-        <Link to="/about">About</Link>
-      </li>
-      <li>
         <Link to="/contact">Contact</Link>
       </li>
       <li>
@@ -55,7 +52,7 @@ const NavList = styled.ul`
       }
     }
 
-    &:nth-child(3) {
+    &:nth-child(2) {
       a {
         display: flex;
         align-items: center;
@@ -100,7 +97,7 @@ const NavList = styled.ul`
     li {
       margin: 0;
 
-      &:nth-child(3) {
+      &:nth-child(2) {
         a {
           .third-party {
             margin-left: 0.4rem;

@@ -1,5 +1,3 @@
-// Router
-import { Link } from "react-router-dom";
 // Styled
 import styled from "styled-components";
 
@@ -19,7 +17,6 @@ const AboutSection = () => {
               technologies.
             </p>
           </article>
-          <Link to="/about">Read More</Link>
         </div>
       </About>
     </div>

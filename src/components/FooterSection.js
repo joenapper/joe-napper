@@ -85,9 +85,6 @@ const FooterSection = () => {
           <h4>Info</h4>
           <ul>
             <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
               <Link to="/contact">Contact</Link>
             </li>
           </ul>
