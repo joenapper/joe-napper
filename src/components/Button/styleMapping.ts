@@ -21,6 +21,12 @@ export const buttonStyleMap = (variant: ButtonVariant) => {
       border: `1px solid ${colors.primary}`,
       borderRadius: spacing.s6,
     },
+    quaternary: {
+      color: colors.primary,
+      background: "transparent",
+      border: `1px solid ${colors.primary}`,
+      borderRadius: spacing.s6,
+    },
   };
   return map[variant];
 };

@@ -1,6 +1,6 @@
 import type { ButtonHTMLAttributes, PropsWithChildren } from "react";
 
-export type ButtonVariant = "primary" | "secondary" | "tertiary";
+export type ButtonVariant = "primary" | "secondary" | "tertiary" | "quaternary";
 
 export type ButtonProps = PropsWithChildren<
   {

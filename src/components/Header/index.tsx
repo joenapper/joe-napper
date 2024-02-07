@@ -18,6 +18,7 @@ export const Header = () => {
   const toggleNav = () => setNavOpen(!navOpen);
 
   return (
+    // TODO: Change HeaderWrapper for consistency
     <Wrapper>
       <NavBar>
         <div className="logo">

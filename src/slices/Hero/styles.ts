@@ -23,3 +23,21 @@ export const HeroButtonWrapper = styled.div`
   justify-content: center;
   gap: ${spacing.s4};
 `;
+
+export const StatsWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: ${spacing.s4};
+`;
+
+export const Stat = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${spacing.s4};
+`;
+
+export const Label = styled.span`
+  /* TODO: Check contrast */
+  color: ${colors.grey};
+  font-size: ${fontSize.sm};
+`;
