@@ -1,4 +1,4 @@
-import { colors, spacing } from "../../constants/theme";
+import { colors, spacing } from "@constants/theme";
 import type { ButtonVariant } from "./types";
 
 export const buttonStyleMap = (variant: ButtonVariant) => {

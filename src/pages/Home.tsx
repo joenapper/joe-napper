@@ -1,6 +1,6 @@
-import { Hero } from "../slices/Hero";
-import { RecentProjects } from "../slices/RecentProjects";
-import { About } from "../slices/About";
+import { Hero } from "@slices/Hero";
+import { RecentProjects } from "@slices/RecentProjects";
+import { About } from "@slices/About";
 
 export const Home = () => (
   <>

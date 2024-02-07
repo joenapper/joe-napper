@@ -1,6 +1,6 @@
-import { Container } from "../../components/Container";
-import { PrimaryText } from "../../components/PrimaryText";
-import { Title } from "../../components/Title";
+import { Container } from "@components/Container";
+import { PrimaryText } from "@components/PrimaryText";
+import { Title } from "@components/Title";
 import { Text, TechStack } from "./styles";
 
 export const About = () => (

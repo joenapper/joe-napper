@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { mediaBelow } from "../../constants/media";
+import { mediaBelow } from "@constants/media";
 
 export const Wrapper = styled.section`
   /* TODO: Align with spacing in theme */

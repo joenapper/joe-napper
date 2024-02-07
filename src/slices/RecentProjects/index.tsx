@@ -1,7 +1,7 @@
-import { Slider } from "../../components/Slider";
-import { Container } from "../../components/Container";
-import { PrimaryText } from "../../components/PrimaryText";
-import { Title } from "../../components/Title";
+import { Slider } from "@components/Slider";
+import { Container } from "@components/Container";
+import { PrimaryText } from "@components/PrimaryText";
+import { Title } from "@components/Title";
 
 export const RecentProjects = () => (
   <Container>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, fontSize, spacing } from "../../constants/theme";
+import { colors, fontSize, spacing } from "@constants/theme";
 
 export const HeroContent = styled.div`
   text-align: center;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, spacing } from "../../constants/theme";
+import { colors, spacing } from "@constants/theme";
 
 export const CardWrapper = styled.div`
   background: white;

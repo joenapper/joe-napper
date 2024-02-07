@@ -1,6 +1,6 @@
-import { Button } from "../../components/Button";
-import { Container } from "../../components/Container";
-import { PrimaryText } from "../../components/PrimaryText";
+import { Button } from "@components/Button";
+import { Container } from "@components/Container";
+import { PrimaryText } from "@components/PrimaryText";
 import {
   HeroContent,
   Title,

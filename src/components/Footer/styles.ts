@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
-import { colors, spacing } from "../../constants/theme";
-import { mediaBelow } from "../../constants/media";
+import { colors, spacing } from "@constants/theme";
+import { mediaBelow } from "@constants/media";
 
 export const FooterWrapper = styled.footer`
   width: 100%;

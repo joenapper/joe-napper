@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
-import { colors, spacing } from "../../constants/theme";
+import { colors, spacing } from "@constants/theme";
 import type { NavProps } from "./types";
-import { mediaBelow } from "../../constants/media";
+import { mediaBelow } from "@constants/media";
 
 export const Wrapper = styled.header`
   width: 100%;

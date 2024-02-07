@@ -1,6 +1,6 @@
-import { Email } from "../../icons/Email";
-import { Instagram } from "../../icons/Instagram";
-import { LinkedIn } from "../../icons/LinkedIn";
+import { Email } from "@icons/Email";
+import { Instagram } from "@icons/Instagram";
+import { LinkedIn } from "@icons/LinkedIn";
 import { NavItem } from "../Header/styles";
 import { PrimaryText } from "../PrimaryText";
 import { FooterWrapper, FooterContent, NavItems, Icons } from "./styles";
