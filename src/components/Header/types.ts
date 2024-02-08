@@ -1,3 +1,3 @@
 export type NavProps = {
-  navOpen: boolean;
+  $navOpen: boolean;
 };

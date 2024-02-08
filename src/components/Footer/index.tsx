@@ -4,6 +4,7 @@ import { LinkedIn } from "@icons/LinkedIn";
 import { NavItem } from "../Header/styles";
 import { PrimaryText } from "../PrimaryText";
 import { FooterWrapper, FooterContent, NavItems, Icons } from "./styles";
+import { Link } from "@constants/GlobalStyles";
 
 export const Footer = () => (
   <FooterWrapper>
@@ -16,13 +17,13 @@ export const Footer = () => (
 
       <NavItems>
         <NavItem>
-          <a href="#projects">Projects</a>
+          <Link href="#projects">Projects</Link>
         </NavItem>
         <NavItem>
-          <a href="#about">About</a>
+          <Link href="#about">About</Link>
         </NavItem>
         <NavItem>
-          <a href="#articles">Articles</a>
+          <Link href="#articles">Articles</Link>
         </NavItem>
       </NavItems>
 

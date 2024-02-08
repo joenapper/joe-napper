@@ -1,16 +1,15 @@
 import styled from "styled-components";
 
 import { buttonStyleMap } from "./styleMapping";
-import type { StyledButtonProps } from "./types";
-import { spacing } from "@constants/theme";
+import type { ButtonWrapperProps } from "./types";
+import { font, spacing } from "@constants/theme";
 
-export const StyledButton = styled.button<StyledButtonProps>`
+export const ButtonWrapper = styled.button<ButtonWrapperProps>`
   outline: none;
   padding: ${spacing.s2} ${spacing.s6};
-  font-family: inherit;
-  transition: 0.24s;
+  font-family: ${font.primary};
 
-  ${({ variant }) => buttonStyleMap(variant!)}
+  ${({ $variant }) => buttonStyleMap($variant!)}
 
   &:disabled {
     pointer-events: none;
@@ -18,5 +17,6 @@ export const StyledButton = styled.button<StyledButtonProps>`
 
   &:hover {
     cursor: pointer;
+    opacity: 0.9;
   }
 `;

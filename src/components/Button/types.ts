@@ -10,4 +10,6 @@ export type ButtonProps = PropsWithChildren<
 
 export type ButtonRef = HTMLButtonElement;
 
-export type StyledButtonProps = Pick<ButtonProps, "variant">;
+export type ButtonWrapperProps = {
+  $variant?: ButtonVariant;
+};

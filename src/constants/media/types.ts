@@ -1,4 +1,4 @@
-import type { FlattenSimpleInterpolation } from "styled-components";
+import { FlattenSimpleInterpolation } from "styled-components";
 
 export type Media = {
   [key: string]: (

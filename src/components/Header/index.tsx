@@ -1,6 +1,6 @@
 import { useState } from "react";
 import {
-  Wrapper,
+  HeaderWrapper,
   NavBar,
   NavMenu,
   NavItem,
@@ -11,6 +11,7 @@ import {
 } from "./styles";
 import { PrimaryText } from "../PrimaryText";
 import { Button } from "../Button";
+import { Link } from "@constants/GlobalStyles";
 
 export const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -18,24 +19,23 @@ export const Header = () => {
   const toggleNav = () => setNavOpen(!navOpen);
 
   return (
-    // TODO: Change HeaderWrapper for consistency
-    <Wrapper>
+    <HeaderWrapper>
       <NavBar>
-        <div className="logo">
+        <div>
           <a href="/">
             <PrimaryText>Joe</PrimaryText> Napper
           </a>
         </div>
 
-        <NavMenu navOpen={navOpen}>
+        <NavMenu $navOpen={navOpen}>
           <NavItem>
-            <a href="#projects">Projects</a>
+            <Link href="#projects">Projects</Link>
           </NavItem>
           <NavItem>
-            <a href="#about">About</a>
+            <Link href="#about">About</Link>
           </NavItem>
           <NavItem>
-            <a href="#articles">Articles</a>
+            <Link href="#articles">Articles</Link>
           </NavItem>
           <NavItem>
             <Button variant="tertiary">Get in touch</Button>
@@ -48,11 +48,11 @@ export const Header = () => {
           role="button"
           tabIndex={0}
         >
-          <TopLine navOpen={navOpen} />
-          <MiddleLine navOpen={navOpen} />
-          <BottomLine navOpen={navOpen} />
+          <TopLine $navOpen={navOpen} />
+          <MiddleLine $navOpen={navOpen} />
+          <BottomLine $navOpen={navOpen} />
         </BurgerMenu>
       </NavBar>
-    </Wrapper>
+    </HeaderWrapper>
   );
 };

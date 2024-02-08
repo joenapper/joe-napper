@@ -3,9 +3,8 @@ import { colors, spacing } from "@constants/theme";
 import type { NavProps } from "./types";
 import { mediaBelow } from "@constants/media";
 
-export const Wrapper = styled.header`
+export const HeaderWrapper = styled.header`
   width: 100%;
-  /* TODO: Align with Container component */
   padding: ${spacing.s4} 10%;
   color: ${colors.white};
 
@@ -44,8 +43,8 @@ export const NavMenu = styled.ul<NavProps>`
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: ${({ navOpen }) =>
-      navOpen ? "translateX(0)" : "translateX(-100%)"};
+    transform: ${({ $navOpen }) =>
+      $navOpen ? "translateX(0)" : "translateX(-100%)"};
     transition: transform 0.35s ease-in;
     overflow-x: hidden;
     z-index: 1;
@@ -70,23 +69,6 @@ export const NavItem = styled.li`
     opacity: 0;
     display: contents;
   `)}
-
-  /* TODO: Review to potentially make this animation desktop only */
-  a {
-    &::after {
-      content: "";
-      display: block;
-      width: 0;
-      height: 2px;
-      background-color: ${colors.primary};
-      transition: width 0.4s;
-    }
-
-    &:hover::after {
-      width: 100%;
-      transition: 0.4s;
-    }
-  }
 `;
 
 export const BurgerMenu = styled.div`
@@ -109,16 +91,16 @@ const Line = styled.div`
 
 export const TopLine = styled(Line)<NavProps>`
   background: ${colors.primary};
-  transform: ${({ navOpen }) =>
-    navOpen && "rotate(-45deg) translate(-5px, 6px)"};
+  transform: ${({ $navOpen }) =>
+    $navOpen && "rotate(-45deg) translate(-5px, 6px)"};
 `;
 
 export const MiddleLine = styled(Line)<NavProps>`
-  opacity: ${({ navOpen }) => navOpen && 0};
+  opacity: ${({ $navOpen }) => $navOpen && 0};
 `;
 
 export const BottomLine = styled(Line)<NavProps>`
   background: ${colors.primary};
-  transform: ${({ navOpen }) =>
-    navOpen && "rotate(45deg) translate(-5px, -6px)"};
+  transform: ${({ $navOpen }) =>
+    $navOpen && "rotate(45deg) translate(-5px, -6px)"};
 `;

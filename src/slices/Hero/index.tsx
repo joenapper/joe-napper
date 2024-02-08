@@ -3,20 +3,23 @@ import { Container } from "@components/Container";
 import { PrimaryText } from "@components/PrimaryText";
 import {
   HeroContent,
-  Title,
+  Strapline,
   Text,
   HeroButtonWrapper,
   StatsWrapper,
   Stat,
   Label,
+  Divider,
 } from "./styles";
+import { Title } from "@components/Title";
 
 export const Hero = () => (
-  <Container as="main">
+  <Container as="main" variant="secondary">
     <HeroContent>
-      <PrimaryText>UI/UX DEVELOPER</PrimaryText>
-      {/* TODO: Review to replace with Title component as='h1'  */}
-      <Title>
+      <Strapline>
+        <PrimaryText>UI/UX DEVELOPER</PrimaryText>
+      </Strapline>
+      <Title as="h1">
         Hello! I'm Joe Napper, <br />
         Senior Frontend Developer
       </Title>
@@ -33,10 +36,12 @@ export const Hero = () => (
           <PrimaryText>10 +</PrimaryText>
           <Label>Years Of Experience</Label>
         </Stat>
+        <Divider />
         <Stat>
           <PrimaryText>50 +</PrimaryText>
           <Label>Successful Projects</Label>
         </Stat>
+        <Divider />
         <Stat>
           <PrimaryText>100%</PrimaryText>
           <Label>Client Satisfaction</Label>

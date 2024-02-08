@@ -1,7 +1,12 @@
-import { Wrapper } from "./styles";
+import { ContainerWrapper } from "./styles";
 import type { ContainerProps } from "./types";
 
-export const Container = ({ children, as = "section" }: ContainerProps) => (
-  // TODO: Change to ContainerWrapper for consistency
-  <Wrapper as={as}>{children}</Wrapper>
+export const Container = ({
+  children,
+  as = "section",
+  variant = "primary",
+}: ContainerProps) => (
+  <ContainerWrapper as={as} $variant={variant!}>
+    {children}
+  </ContainerWrapper>
 );

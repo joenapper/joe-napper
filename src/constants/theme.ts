@@ -7,8 +7,8 @@ export const colors = {
 } as const;
 
 export const font = {
-  primary: `"Ropa Sans", sans-serif`,
-  secondary: `"Montserrat", sans-serif`,
+  primary: `"Roboto", sans-serif`,
+  secondary: `"Inter Variable", sans-serif`,
 } as const;
 
 export const fontSize = {

@@ -1,5 +1,5 @@
-import { createGlobalStyle, css } from "styled-components";
-import { colors, fontSize } from "./theme";
+import styled, { createGlobalStyle, css } from "styled-components";
+import { colors, font, fontSize } from "./theme";
 import { mediaBelow } from "./media";
 
 const GlobalStyles = createGlobalStyle`
@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     background: ${colors.black};
     color: ${colors.white};
-    font-family: "Montserrat", sans-serif;
+    font-family: ${font.secondary};
     font-size: ${fontSize.sm};
     
     ${mediaBelow.tablet(css`
@@ -44,6 +44,23 @@ const GlobalStyles = createGlobalStyle`
   textarea,
   select {
     font-family: inherit;
+  }
+`;
+
+export const Link = styled.a`
+  /* TODO: Review to potentially make this animation desktop only */
+  &::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: ${colors.primary};
+    transition: width 0.4s;
+  }
+
+  &:hover::after {
+    width: 100%;
+    transition: 0.4s;
   }
 `;
 

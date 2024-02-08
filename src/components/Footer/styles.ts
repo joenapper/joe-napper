@@ -4,7 +4,6 @@ import { mediaBelow } from "@constants/media";
 
 export const FooterWrapper = styled.footer`
   width: 100%;
-  /* TODO: Align with Container component */
   padding: ${spacing.s4} 10%;
   color: ${colors.white};
 
