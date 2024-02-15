@@ -2,27 +2,28 @@ import { Slider } from "@components/Slider";
 import { Container } from "@components/Container";
 import { PrimaryText } from "@components/PrimaryText";
 import { Title } from "@components/Title";
-import { RecentProjectsWrapper, TitleWrapper } from "./styles";
+import { ClientsWrapper, TitleWrapper } from "./styles";
 import { items, responsive } from "./config";
 
-export const RecentProjects = () => (
-  <RecentProjectsWrapper>
+export const Clients = () => (
+  <ClientsWrapper>
     <Container as="div">
       <TitleWrapper>
         <Title>
-          <PrimaryText>Recent</PrimaryText> Projects
+          <PrimaryText>Companies</PrimaryText> I've Worked with
         </Title>
       </TitleWrapper>
       <Slider
         items={items}
+        autoPlay
+        autoPlaySpeed={1}
+        transitionDuration={3000}
+        customTransition="all 3s linear"
+        rewind={true}
         responsive={responsive}
-        swipeable
-        showDots
-        keyBoardControl
-        removeArrowOnDeviceType={["tablet", "mobile"]}
-        draggable
-        centerMode
+        arrows={false}
+        swipeable={false}
       />
     </Container>
-  </RecentProjectsWrapper>
+  </ClientsWrapper>
 );

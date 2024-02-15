@@ -2,15 +2,16 @@ import { Slider } from "@components/Slider";
 import { Container } from "@components/Container";
 import { PrimaryText } from "@components/PrimaryText";
 import { Title } from "@components/Title";
-import { RecentProjectsWrapper, TitleWrapper } from "./styles";
+import { ArticlesWrapper, TitleWrapper } from "./styles";
 import { items, responsive } from "./config";
 
-export const RecentProjects = () => (
-  <RecentProjectsWrapper>
+// TODO: Align Projects, Clients & Articles layout
+export const Articles = () => (
+  <ArticlesWrapper>
     <Container as="div">
       <TitleWrapper>
         <Title>
-          <PrimaryText>Recent</PrimaryText> Projects
+          <PrimaryText>My</PrimaryText> Articles
         </Title>
       </TitleWrapper>
       <Slider
@@ -21,8 +22,8 @@ export const RecentProjects = () => (
         keyBoardControl
         removeArrowOnDeviceType={["tablet", "mobile"]}
         draggable
-        centerMode
+        partialVisible
       />
     </Container>
-  </RecentProjectsWrapper>
+  </ArticlesWrapper>
 );

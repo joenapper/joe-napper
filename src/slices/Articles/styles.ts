@@ -2,7 +2,7 @@ import { mediaBelow } from "@constants/media";
 import { spacing } from "@constants/theme";
 import styled, { css } from "styled-components";
 
-export const RecentProjectsWrapper = styled.section`
+export const ArticlesWrapper = styled.section`
   & > div {
     display: flex;
     flex-direction: column;

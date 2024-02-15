@@ -1,3 +1,14 @@
+import { ArticleCard } from "@components/ArticleCard";
+
+export const items = [
+  <ArticleCard />,
+  <ArticleCard />,
+  <ArticleCard />,
+  <ArticleCard />,
+  <ArticleCard />,
+  <ArticleCard />,
+];
+
 // TODO: Align with breakpoints
 export const responsive = {
   desktop: {
@@ -5,7 +16,7 @@ export const responsive = {
       max: 3000,
       min: 1024,
     },
-    items: 1,
+    items: 3,
     partialVisibilityGutter: 40,
   },
   tablet: {
@@ -13,8 +24,8 @@ export const responsive = {
       max: 1024,
       min: 464,
     },
-    items: 1,
-    partialVisibilityGutter: 40,
+    items: 2,
+    partialVisibilityGutter: 80,
   },
   mobile: {
     breakpoint: {
@@ -22,6 +33,6 @@ export const responsive = {
       min: 0,
     },
     items: 1,
-    partialVisibilityGutter: 0,
+    partialVisibilityGutter: 10,
   },
 };

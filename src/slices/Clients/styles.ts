@@ -2,7 +2,8 @@ import { mediaBelow } from "@constants/media";
 import { spacing } from "@constants/theme";
 import styled, { css } from "styled-components";
 
-export const RecentProjectsWrapper = styled.section`
+// TODO: Align with RecentProjects slice wrapper
+export const ClientsWrapper = styled.section`
   & > div {
     display: flex;
     flex-direction: column;
@@ -15,6 +16,7 @@ export const RecentProjectsWrapper = styled.section`
   }
 `;
 
+// TODO: Align with RecentProjects slice title wrapper
 export const TitleWrapper = styled.div`
   text-align: center;
 `;

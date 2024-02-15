@@ -15,6 +15,7 @@ export const CardWrapper = styled.div`
 
 export const Image = styled.img`
   width: 100%;
+  height: 100%;
   border-radius: ${spacing.s2} ${spacing.none} ${spacing.none} ${spacing.s2};
 
   ${mediaBelow.tablet(css`
