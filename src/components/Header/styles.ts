@@ -30,7 +30,8 @@ export const NavMenu = styled.ul<NavProps>`
   justify-content: space-around;
   align-items: center;
 
-  ${mediaBelow.tablet(css`
+  /* TODO: Align with new media utils */
+  @media screen and (max-width: 768px) {
     position: absolute;
     /* TODO: Review padding here */
     padding: 14vh 0 16vh 0;
@@ -58,7 +59,7 @@ export const NavMenu = styled.ul<NavProps>`
       height: 100%;
       background-color: ${colors.primary};
     }
-  `)}
+  }
 `;
 
 export const NavItem = styled.li`

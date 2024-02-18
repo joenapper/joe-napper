@@ -1,11 +1,11 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { SpacerWrapperProps } from "./types";
-import { mediaBelow } from "@constants/media";
 
 export const SpacerWrapper = styled.div<SpacerWrapperProps>`
   height: ${({ $desktopY }) => $desktopY};
 
-  ${mediaBelow.tablet(css`
+  /* TODO: Align with new media utils */
+  @media screen and (max-width: 768px) {
     height: ${({ $mobileY }) => $mobileY};
-  `)};
+  }
 `;
