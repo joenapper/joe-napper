@@ -22,9 +22,7 @@ export const Header = () => {
     <HeaderWrapper>
       <NavBar>
         <div>
-          <a href="/">
-            <PrimaryText>Joe</PrimaryText> Napper
-          </a>
+          <PrimaryText>Joe</PrimaryText> Napper
         </div>
 
         <NavMenu $navOpen={navOpen}>
@@ -38,7 +36,9 @@ export const Header = () => {
             <Link href="#articles">Articles</Link>
           </NavItem>
           <NavItem>
-            <Button variant="tertiary">Get in touch</Button>
+            <Button variant="tertiary">
+              <a href="#contact">Get in touch</a>
+            </Button>
           </NavItem>
         </NavMenu>
 

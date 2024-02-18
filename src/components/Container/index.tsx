@@ -5,8 +5,9 @@ export const Container = ({
   children,
   as = "section",
   variant = "primary",
+  id,
 }: ContainerProps) => (
-  <ContainerWrapper as={as} $variant={variant!}>
+  <ContainerWrapper as={as} $variant={variant!} id={id}>
     {children}
   </ContainerWrapper>
 );

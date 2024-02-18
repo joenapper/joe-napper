@@ -3,24 +3,24 @@ import { PrimaryText } from "@components/PrimaryText";
 import { items, responsive } from "./config";
 import { SliderSliceLayout } from "@components/SliderSliceLayout";
 
-export const Clients = () => (
+export const Projects = () => (
   <SliderSliceLayout
+    id="projects"
     title={
       <>
-        <PrimaryText>Companies</PrimaryText> I've Worked with
+        <PrimaryText>Recent</PrimaryText> Projects
       </>
     }
   >
     <Slider
       items={items}
-      autoPlay
-      autoPlaySpeed={1}
-      transitionDuration={3000}
-      customTransition="all 3s linear"
-      rewind={true}
       responsive={responsive}
-      arrows={false}
-      swipeable={false}
+      swipeable
+      showDots
+      keyBoardControl
+      removeArrowOnDeviceType={["tablet", "mobile"]}
+      draggable
+      centerMode
     />
   </SliderSliceLayout>
 );

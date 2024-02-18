@@ -15,14 +15,22 @@ export const FooterWrapper = styled.footer`
 export const FooterContent = styled.div`
   display: flex;
   justify-content: space-between;
+  border-top: 1px solid ${colors.primary};
+  padding-top: ${spacing.s6};
 
   ${mediaBelow.tablet(css`
     flex-direction: column;
+    padding-top: ${spacing.s3};
+    gap: ${spacing.s3};
   `)};
 `;
 
 export const NavItems = styled.ul`
   display: flex;
+
+  ${mediaBelow.tablet(css`
+    flex-direction: column;
+  `)};
 `;
 
 export const Icons = styled.ul`

@@ -5,6 +5,7 @@ import { NavItem } from "../Header/styles";
 import { PrimaryText } from "../PrimaryText";
 import { FooterWrapper, FooterContent, NavItems, Icons } from "./styles";
 import { Link } from "@constants/GlobalStyles";
+import { links, supportEmail } from "@constants/App.constants";
 
 export const Footer = () => (
   <FooterWrapper>
@@ -28,9 +29,15 @@ export const Footer = () => (
       </NavItems>
 
       <Icons>
-        <Instagram />
-        <LinkedIn />
-        <Email />
+        <a href={links.instagram} target="_blank" rel="noopener noreferrer">
+          <Instagram />
+        </a>
+        <a href={links.linkedIn} target="_blank" rel="noopener noreferrer">
+          <LinkedIn />
+        </a>
+        <a href={`mailto:${supportEmail}`}>
+          <Email />
+        </a>
       </Icons>
     </FooterContent>
   </FooterWrapper>

@@ -9,6 +9,6 @@ export const ContainerWrapper = styled.section<ContainerWrapperProps>`
   margin: auto;
 
   ${mediaBelow.tablet(css`
-    padding: ${spacing.s8} 1rem;
+    padding: ${spacing.s8} ${spacing.s4};
   `)}
 `;

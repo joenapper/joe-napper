@@ -14,7 +14,7 @@ export const ContactWrapper = styled.div`
 
 export const Image = styled.img`
   width: 100%;
-  height: 500px;
+  height: 575px;
   object-fit: cover;
 
   ${mediaBelow.tablet(css`
@@ -30,9 +30,6 @@ export const ContactFormWrapper = styled.div`
   transform: translateY(50%);
   background: ${colors.darkGrey};
   padding: ${spacing.s8};
-  display: flex;
-  flex-direction: column;
-  gap: ${spacing.s4};
 
   ${mediaBelow.tablet(css`
     position: relative;
@@ -40,5 +37,21 @@ export const ContactFormWrapper = styled.div`
     bottom: initial;
     left: initial;
     transform: translateY(0);
+  `)};
+`;
+
+export const ContactForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: ${spacing.s6};
+
+  ${mediaBelow.tablet(css`
+    gap: ${spacing.s3};
+  `)};
+`;
+
+export const ContactFormTitleWrapper = styled.div`
+  ${mediaBelow.tablet(css`
+    text-align: center;
   `)};
 `;

@@ -12,6 +12,7 @@ import {
   Divider,
 } from "./styles";
 import { Title } from "@components/Title";
+import { links } from "@constants/App.constants";
 
 export const Hero = () => (
   <Container as="main" variant="secondary">
@@ -28,8 +29,14 @@ export const Hero = () => (
         applications from the ground up using modern technologies.
       </Text>
       <HeroButtonWrapper>
-        <Button>Projects</Button>
-        <Button variant="secondary">LinkedIn</Button>
+        <Button>
+          <a href="#projects">Projects</a>
+        </Button>
+        <Button variant="secondary">
+          <a href={links.linkedIn} target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+        </Button>
       </HeroButtonWrapper>
       <StatsWrapper>
         <Stat>
