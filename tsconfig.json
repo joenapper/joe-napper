@@ -9,12 +9,12 @@
     /* Absolute importing */
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
       "@constants/*": ["src/constants/*"],
       "@icons/*": ["src/icons/*"],
       "@pages/*": ["src/pages/*"],
-      "@slices/*": ["src/slices/*"]
+      "@slices/*": ["src/slices/*"],
+      "@hooks/*": ["src/hooks/*"]
     },
 
     /* Bundler mode */

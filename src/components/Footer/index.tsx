@@ -3,7 +3,7 @@ import { Instagram } from "@icons/Instagram";
 import { LinkedIn } from "@icons/LinkedIn";
 import { NavItem } from "../Header/styles";
 import { PrimaryText } from "../PrimaryText";
-import { FooterWrapper, FooterContent, NavItems, Icons } from "./styles";
+import { FooterWrapper, FooterContent, NavItems, Icons, Icon } from "./styles";
 import { Link } from "@constants/GlobalStyles";
 import { links, supportEmail } from "@constants/App.constants";
 
@@ -29,15 +29,15 @@ export const Footer = () => (
       </NavItems>
 
       <Icons>
-        <a href={links.instagram} target="_blank" rel="noopener noreferrer">
+        <Icon href={links.instagram} target="_blank" rel="noopener noreferrer">
           <Instagram />
-        </a>
-        <a href={links.linkedIn} target="_blank" rel="noopener noreferrer">
+        </Icon>
+        <Icon href={links.linkedIn} target="_blank" rel="noopener noreferrer">
           <LinkedIn />
-        </a>
-        <a href={`mailto:${supportEmail}`}>
+        </Icon>
+        <Icon href={`mailto:${supportEmail}`}>
           <Email />
-        </a>
+        </Icon>
       </Icons>
     </FooterContent>
   </FooterWrapper>

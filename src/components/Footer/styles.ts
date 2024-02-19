@@ -37,3 +37,14 @@ export const Icons = styled.ul`
   display: flex;
   gap: ${spacing.s2};
 `;
+
+export const Icon = styled.a`
+  transition: all 0.4s ease;
+
+  &:hover {
+    svg,
+    path {
+      fill: ${colors.primary};
+    }
+  }
+`;

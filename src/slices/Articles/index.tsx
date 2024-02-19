@@ -20,6 +20,7 @@ export const Articles = () => (
       keyBoardControl
       removeArrowOnDeviceType={["tablet", "mobile"]}
       draggable
+      minimumTouchDrag={80}
       partialVisible
     />
   </SliderSliceLayout>

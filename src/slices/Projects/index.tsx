@@ -20,6 +20,7 @@ export const Projects = () => (
       keyBoardControl
       removeArrowOnDeviceType={["tablet", "mobile"]}
       draggable
+      minimumTouchDrag={80}
       centerMode
     />
   </SliderSliceLayout>

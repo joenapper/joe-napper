@@ -7,13 +7,13 @@ export const ArticleCardWrapper = styled.div`
   background: white;
   border-radius: ${spacing.s2};
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
   height: ${cardHeight}px;
 `;
 
 export const Image = styled.img`
   width: 100%;
-  height: ${cardHeight / 2}px;
+  height: ${cardHeight / 3}px;
 `;
 
 export const ContentWrapper = styled.div`
