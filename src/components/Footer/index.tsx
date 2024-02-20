@@ -29,13 +29,23 @@ export const Footer = () => (
       </NavItems>
 
       <Icons>
-        <Icon href={links.instagram} target="_blank" rel="noopener noreferrer">
+        <Icon
+          href={links.instagram}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
           <Instagram />
         </Icon>
-        <Icon href={links.linkedIn} target="_blank" rel="noopener noreferrer">
+        <Icon
+          href={links.linkedIn}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+        >
           <LinkedIn />
         </Icon>
-        <Icon href={`mailto:${supportEmail}`}>
+        <Icon href={`mailto:${supportEmail}`} aria-label="Email">
           <Email />
         </Icon>
       </Icons>

@@ -18,6 +18,12 @@ export const Header = () => {
 
   const toggleNav = () => setNavOpen(!navOpen);
 
+  const handleNavItemClick = () => {
+    if (navOpen) {
+      setNavOpen(false);
+    }
+  };
+
   return (
     <HeaderWrapper>
       <NavBar>
@@ -26,16 +32,16 @@ export const Header = () => {
         </div>
 
         <NavMenu $navOpen={navOpen}>
-          <NavItem>
+          <NavItem onClick={handleNavItemClick}>
             <Link href="#projects">Projects</Link>
           </NavItem>
-          <NavItem>
+          <NavItem onClick={handleNavItemClick}>
             <Link href="#about">About</Link>
           </NavItem>
-          <NavItem>
+          <NavItem onClick={handleNavItemClick}>
             <Link href="#articles">Articles</Link>
           </NavItem>
-          <NavItem>
+          <NavItem onClick={handleNavItemClick}>
             <Button variant="tertiary">
               <a href="#contact">Get in touch</a>
             </Button>
@@ -47,6 +53,7 @@ export const Header = () => {
           onKeyUp={toggleNav}
           role="button"
           tabIndex={0}
+          $navOpen={navOpen}
         >
           <TopLine $navOpen={navOpen} />
           <MiddleLine $navOpen={navOpen} />

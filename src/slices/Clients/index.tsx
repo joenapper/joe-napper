@@ -21,6 +21,7 @@ export const Clients = () => (
       responsive={responsive}
       arrows={false}
       swipeable={false}
+      itemClass="testry"
     />
   </SliderSliceLayout>
 );

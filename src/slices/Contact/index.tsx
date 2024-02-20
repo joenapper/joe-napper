@@ -48,6 +48,7 @@ export const Contact = () => {
         () => {
           setLoading(false);
           setModalOpen(true);
+          (e.target as any).reset();
         },
         (error) => {
           if (error) {
@@ -57,8 +58,6 @@ export const Contact = () => {
           }
         }
       );
-    // TODO: Review if needed
-    // e.target.reset();
   };
   return (
     <>
@@ -78,9 +77,9 @@ export const Contact = () => {
                   Get In <PrimaryText>Touch</PrimaryText>
                 </Title>
               </ContactFormTitleWrapper>
-              <Input id="name" label="Name" />
-              <Input id="email" label="Email" />
-              <TextArea id="message" label="Message" rows={8} />
+              <Input id="name" label="Name" required />
+              <Input id="email" label="Email" required type="email" />
+              <TextArea id="message" label="Message" rows={8} required />
               <Button disabled={disabled}>Send</Button>
             </ContactForm>
           </ContactFormWrapper>

@@ -1,10 +1,10 @@
 const logoHeight = 60;
 
 export const items = [
-  <img src="/clients/bt.png" alt="BT" height={logoHeight} />,
   <img src="/clients/nhs.png" alt="NHS" height={logoHeight} />,
-  <img src="/clients/cognizant.png" alt="Cognizant" height={logoHeight} />,
+  <img src="/clients/bt.png" alt="BT" height={logoHeight} />,
   <img src="/clients/hsbc.png" alt="HSBC" height={logoHeight} />,
+  <img src="/clients/cognizant.png" alt="Cognizant" height={logoHeight} />,
   <img
     src="/clients/oodle-car-finance.png"
     alt="Oodle car finance"

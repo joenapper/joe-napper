@@ -32,20 +32,19 @@ export const NavMenu = styled.ul<NavProps>`
 
   /* TODO: Align with new media utils */
   @media screen and (max-width: 768px) {
-    position: absolute;
+    position: fixed;
     /* TODO: Review padding here */
     padding: 14vh 0 16vh 0;
     top: 0;
-    left: 0;
+    right: 0;
     height: 100vh;
     background-color: ${colors.black};
-    /* TODO: Review width here */
-    width: 85%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
     transform: ${({ $navOpen }) =>
-      $navOpen ? "translateX(0)" : "translateX(-100%)"};
+      $navOpen ? "translateX(0)" : "translateX(100%)"};
     transition: transform 0.35s ease-in;
     overflow-x: hidden;
     z-index: 1;
@@ -54,7 +53,7 @@ export const NavMenu = styled.ul<NavProps>`
       position: absolute;
       content: "";
       top: 0;
-      right: 0;
+      left: 0;
       width: ${spacing.s2};
       height: 100%;
       background-color: ${colors.primary};
@@ -72,13 +71,17 @@ export const NavItem = styled.li`
   `)}
 `;
 
-export const BurgerMenu = styled.div`
+export const BurgerMenu = styled.div<NavProps>`
   display: none;
 
-  ${mediaBelow.tablet(css`
+  /* TODO: Align with new media utils */
+  @media screen and (max-width: 768px) {
     display: block;
     cursor: pointer;
-  `)}
+    z-index: 1;
+    position: ${({ $navOpen }) => $navOpen && "fixed"};
+    right: ${({ $navOpen }) => $navOpen && spacing.s4};
+  }
 `;
 
 const Line = styled.div`
