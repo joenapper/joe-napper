@@ -1,19 +1,15 @@
 import styled from "styled-components";
-import { colors, spacing } from "@constants/theme";
-
-const cardHeight = 400;
+import { colors, deviceBelow, spacing } from "@constants/theme";
 
 export const ArticleCardWrapper = styled.div`
   background: white;
   border-radius: ${spacing.s2};
-  display: grid;
-  grid-template-rows: 1fr 2fr;
-  height: ${cardHeight}px;
 `;
 
 export const Image = styled.img`
   width: 100%;
-  height: ${cardHeight / 3}px;
+  height: 125px;
+  object-fit: cover;
 `;
 
 export const ContentWrapper = styled.div`
@@ -26,6 +22,31 @@ export const ContentWrapper = styled.div`
   gap: ${spacing.s4};
 `;
 
-export const Text = styled.p``;
+export const TitleWrapper = styled.div`
+  height: 114px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+`;
+
+export const Text = styled.p`
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @media ${deviceBelow.tablet} {
+    -webkit-line-clamp: 5;
+  }
+`;
 
 export const ButtonWrapper = styled.div``;

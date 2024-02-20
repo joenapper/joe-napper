@@ -4,13 +4,14 @@ import {
   ArticleCardWrapper,
   Image,
   ContentWrapper,
+  TitleWrapper,
   Text,
   ButtonWrapper,
 } from "./styles";
 import type { ArticleCardProps } from "./types";
 
 // TODO: Merge with Card component
-export const ArticleCard = ({ image, title, text }: ArticleCardProps) => (
+export const ArticleCard = ({ image, title, text, link }: ArticleCardProps) => (
   <ArticleCardWrapper>
     <Image
       src={image}
@@ -18,10 +19,16 @@ export const ArticleCard = ({ image, title, text }: ArticleCardProps) => (
       draggable="false"
     />
     <ContentWrapper>
-      <Title as="h3">{title}</Title>
+      <TitleWrapper>
+        <Title as="h3">{title}</Title>
+      </TitleWrapper>
       <Text>{text}</Text>
       <ButtonWrapper>
-        <Button variant="quaternary">Read More</Button>
+        <Button variant="quaternary">
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            Read Article
+          </a>
+        </Button>
       </ButtonWrapper>
     </ContentWrapper>
   </ArticleCardWrapper>

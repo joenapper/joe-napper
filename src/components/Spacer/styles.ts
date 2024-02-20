@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { SpacerWrapperProps } from "./types";
-import { deviceBelow } from "@constants/theme";
+import { deviceBelow, spacing } from "@constants/theme";
 
 export const SpacerWrapper = styled.div<SpacerWrapperProps>`
-  height: ${({ $desktopY }) => $desktopY};
+  height: ${({ $desktopY }) => spacing[$desktopY]};
 
   @media ${deviceBelow.tablet} {
-    height: ${({ $mobileY }) => $mobileY};
+    height: ${({ $mobileY }) => spacing[$mobileY]};
   }
 `;

@@ -9,7 +9,13 @@ import {
 } from "./styles";
 import type { ProjectCardProps } from "./types";
 
-export const ProjectCard = ({ image, title, type, text }: ProjectCardProps) => (
+export const ProjectCard = ({
+  image,
+  title,
+  type,
+  text,
+  link,
+}: ProjectCardProps) => (
   <ProjectCardWrapper>
     <Image
       src={image}
@@ -22,7 +28,11 @@ export const ProjectCard = ({ image, title, type, text }: ProjectCardProps) => (
       </Title>
       <Text>{text}</Text>
       <ButtonWrapper>
-        <Button variant="quaternary">View Project</Button>
+        <Button variant="quaternary">
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            View Project
+          </a>
+        </Button>
       </ButtonWrapper>
     </ContentWrapper>
   </ProjectCardWrapper>

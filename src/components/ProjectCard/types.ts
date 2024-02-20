@@ -3,4 +3,5 @@ export type ProjectCardProps = {
   title: string;
   type: string;
   text: string;
+  link: string;
 };
