@@ -37,7 +37,6 @@ export const items = articles.map((article, index) => (
   <ArticleCard key={index} {...article} />
 ));
 
-// TODO: Align with breakpoints
 export const responsive = {
   desktop: {
     breakpoint: {

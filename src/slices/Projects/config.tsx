@@ -42,7 +42,6 @@ export const items = projects.map((project, index) => (
   <ProjectCard key={index} {...project} />
 ));
 
-// TODO: Align with breakpoints
 export const responsive = {
   desktop: {
     breakpoint: {

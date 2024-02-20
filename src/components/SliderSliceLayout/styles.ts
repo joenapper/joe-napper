@@ -1,5 +1,9 @@
 import styled from "styled-components";
 import { deviceBelow, spacing } from "@constants/theme";
+import {
+  desktopContainerPaddingY,
+  mobileContainerPaddingY,
+} from "@components/Container/styles";
 
 export const SliderSliceLayoutWrapper = styled.section`
   & > div {
@@ -7,15 +11,14 @@ export const SliderSliceLayoutWrapper = styled.section`
     flex-direction: column;
     gap: ${spacing.s8};
 
-    /* TODO: Align with Container component */
     @media ${deviceBelow.desktop} {
-      padding: ${spacing.s16} ${spacing.none};
+      padding: ${desktopContainerPaddingY} ${spacing.none};
       max-width: 100%;
       gap: ${spacing.s4};
     }
 
     @media ${deviceBelow.tablet} {
-      padding: ${spacing.s8} ${spacing.none};
+      padding: ${mobileContainerPaddingY} ${spacing.none};
     }
   }
 `;

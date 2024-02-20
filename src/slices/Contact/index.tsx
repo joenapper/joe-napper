@@ -17,7 +17,6 @@ import { FailModal } from "@components/Modals/ContactFormModal/FailModal";
 import { SuccessModal } from "@components/Modals/ContactFormModal/SuccessModal";
 import { Loader } from "@components/Loader";
 import { Spacer } from "@components/Spacer";
-import { spacing } from "@constants/theme";
 
 // TODO: Review to simplify this file
 export const Contact = () => {
@@ -67,7 +66,7 @@ export const Contact = () => {
         <Title>
           <PrimaryText>Want To Work</PrimaryText> With Me?
         </Title>
-        <Spacer desktopY={spacing.s8} mobileY={spacing.s4} />
+        <Spacer desktopY="s8" mobileY="s4" />
         <ContactWrapper>
           <Image src="/contact-hero.png" alt="Contact illustration" />
           <ContactFormWrapper>

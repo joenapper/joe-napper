@@ -47,7 +47,6 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 export const Link = styled.a`
-  /* TODO: Review to potentially make this animation desktop only */
   &::after {
     content: "";
     display: block;

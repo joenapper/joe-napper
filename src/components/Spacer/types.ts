@@ -1,11 +1,11 @@
+import { spacing } from "@constants/theme";
+
 export type SpacerProps = {
-  // TODO: Align type with spacing
-  mobileY: any;
-  desktopY: any;
+  mobileY: keyof typeof spacing;
+  desktopY: keyof typeof spacing;
 };
 
 export type SpacerWrapperProps = {
-  // TODO: Align type with spacing
-  $mobileY: any;
-  $desktopY: any;
+  $mobileY: keyof typeof spacing;
+  $desktopY: keyof typeof spacing;
 };

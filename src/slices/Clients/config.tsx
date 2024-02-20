@@ -17,7 +17,6 @@ export const items = [
   />,
 ];
 
-// TODO: Align with breakpoints
 export const responsive = {
   desktop: {
     breakpoint: {

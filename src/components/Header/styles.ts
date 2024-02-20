@@ -31,8 +31,7 @@ export const NavMenu = styled.ul<NavProps>`
 
   @media ${deviceBelow.tablet} {
     position: fixed;
-    /* TODO: Review padding here */
-    padding: 14vh 0 16vh 0;
+    padding: 12vh 0;
     top: 0;
     right: 0;
     height: 100vh;
@@ -43,7 +42,7 @@ export const NavMenu = styled.ul<NavProps>`
     align-items: center;
     transform: ${({ $navOpen }) =>
       $navOpen ? "translateX(0)" : "translateX(100%)"};
-    transition: transform 0.35s ease-in;
+    transition: transform 0.4s ease-in;
     overflow-x: hidden;
     z-index: 1;
 
@@ -87,7 +86,7 @@ const Line = styled.div`
   background-color: ${colors.white};
   margin: 5px;
   border-radius: 4px;
-  transition: all 0.75s ease;
+  transition: all 0.4s ease;
 `;
 
 export const TopLine = styled(Line)<NavProps>`
