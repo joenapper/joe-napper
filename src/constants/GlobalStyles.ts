@@ -1,6 +1,5 @@
-import styled, { createGlobalStyle, css } from "styled-components";
-import { colors, font, fontSize } from "./theme";
-import { mediaBelow } from "./media";
+import styled, { createGlobalStyle } from "styled-components";
+import { colors, deviceBelow, font, fontSize } from "./theme";
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -19,9 +18,9 @@ const GlobalStyles = createGlobalStyle`
     font-family: ${font.secondary};
     font-size: ${fontSize.sm};
     
-    ${mediaBelow.tablet(css`
+    @media ${deviceBelow.tablet} {
       font-size: ${fontSize.base};
-    `)}
+    }
   }
 
   ul {

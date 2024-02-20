@@ -1,15 +1,14 @@
-import { mediaBelow } from "@constants/media";
-import { colors, spacing } from "@constants/theme";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import { colors, deviceBelow, spacing } from "@constants/theme";
 
 export const ContactWrapper = styled.div`
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  ${mediaBelow.tablet(css`
+  @media ${deviceBelow.tablet} {
     grid-template-columns: 1fr;
-  `)};
+  }
 `;
 
 export const Image = styled.img`
@@ -17,9 +16,9 @@ export const Image = styled.img`
   height: 575px;
   object-fit: cover;
 
-  ${mediaBelow.tablet(css`
+  @media ${deviceBelow.tablet} {
     display: none;
-  `)};
+  }
 `;
 
 export const ContactFormWrapper = styled.div`
@@ -31,13 +30,13 @@ export const ContactFormWrapper = styled.div`
   background: ${colors.darkGrey};
   padding: ${spacing.s8};
 
-  ${mediaBelow.tablet(css`
+  @media ${deviceBelow.tablet} {
     position: relative;
     right: initial;
     bottom: initial;
     left: initial;
     transform: translateY(0);
-  `)};
+  }
 `;
 
 export const ContactForm = styled.form`
@@ -45,13 +44,13 @@ export const ContactForm = styled.form`
   flex-direction: column;
   gap: ${spacing.s6};
 
-  ${mediaBelow.tablet(css`
+  @media ${deviceBelow.tablet} {
     gap: ${spacing.s3};
-  `)};
+  }
 `;
 
 export const ContactFormTitleWrapper = styled.div`
-  ${mediaBelow.tablet(css`
+  @media ${deviceBelow.tablet} {
     text-align: center;
-  `)};
+  }
 `;

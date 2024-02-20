@@ -1,6 +1,5 @@
-import styled, { css } from "styled-components";
-import { colors, spacing } from "@constants/theme";
-import { mediaBelow } from "@constants/media";
+import styled from "styled-components";
+import { colors, deviceBelow, spacing } from "@constants/theme";
 
 export const ProjectCardWrapper = styled.div`
   background: white;
@@ -9,10 +8,10 @@ export const ProjectCardWrapper = styled.div`
   grid-template-columns: 1fr 1fr;
   min-height: 320px;
 
-  ${mediaBelow.tablet(css`
+  @media ${deviceBelow.tablet} {
     grid-template-columns: 1fr;
     min-height: initial;
-  `)};
+  }
 `;
 
 export const Image = styled.img`
@@ -21,10 +20,10 @@ export const Image = styled.img`
   border-radius: ${spacing.s2} ${spacing.none} ${spacing.none} ${spacing.s2};
   object-fit: cover;
 
-  ${mediaBelow.tablet(css`
+  @media ${deviceBelow.tablet} {
     border-radius: ${spacing.s2} ${spacing.s2} ${spacing.none} ${spacing.none};
     height: 200px;
-  `)};
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -38,7 +37,7 @@ export const ContentWrapper = styled.div`
   gap: ${spacing.s4};
   border-radius: ${spacing.none} ${spacing.s2} ${spacing.s2} ${spacing.none};
 
-  ${mediaBelow.tablet(css`
+  @media ${deviceBelow.tablet} {
     border-radius: ${spacing.none} ${spacing.none} ${spacing.s2} ${spacing.s2};
     min-height: 260px;
     justify-content: initial;
@@ -46,18 +45,18 @@ export const ContentWrapper = styled.div`
     h3 {
       height: 86px;
     }
-  `)};
+  }
 `;
 
 export const Text = styled.p`
-  ${mediaBelow.tablet(css`
+  @media ${deviceBelow.tablet} {
     height: 100px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;
     overflow: hidden;
     text-overflow: ellipsis;
-  `)};
+  }
 `;
 
 export const ButtonWrapper = styled.div``;

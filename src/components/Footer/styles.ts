@@ -1,15 +1,14 @@
-import styled, { css } from "styled-components";
-import { colors, spacing } from "@constants/theme";
-import { mediaBelow } from "@constants/media";
+import styled from "styled-components";
+import { colors, deviceBelow, spacing } from "@constants/theme";
 
 export const FooterWrapper = styled.footer`
   width: 100%;
   padding: ${spacing.s4} 10%;
   color: ${colors.white};
 
-  ${mediaBelow.tablet(css`
+  @media ${deviceBelow.tablet} {
     padding: ${spacing.s4};
-  `)};
+  }
 `;
 
 export const FooterContent = styled.div`
@@ -18,19 +17,19 @@ export const FooterContent = styled.div`
   border-top: 1px solid ${colors.primary};
   padding-top: ${spacing.s6};
 
-  ${mediaBelow.tablet(css`
+  @media ${deviceBelow.tablet} {
     flex-direction: column;
     padding-top: ${spacing.s3};
     gap: ${spacing.s3};
-  `)};
+  }
 `;
 
 export const NavItems = styled.ul`
   display: flex;
 
-  ${mediaBelow.tablet(css`
+  @media ${deviceBelow.tablet} {
     flex-direction: column;
-  `)};
+  }
 `;
 
 export const Icons = styled.ul`

@@ -1,6 +1,5 @@
-import styled, { css } from "styled-components";
-import { colors, fontSize, spacing } from "@constants/theme";
-import { mediaBelow } from "@constants/media";
+import styled from "styled-components";
+import { colors, deviceBelow, fontSize, spacing } from "@constants/theme";
 
 export const HeroContent = styled.div`
   text-align: center;
@@ -8,9 +7,9 @@ export const HeroContent = styled.div`
   flex-direction: column;
   gap: ${spacing.s6};
 
-  ${mediaBelow.tablet(css`
+  @media ${deviceBelow.tablet} {
     gap: ${spacing.s3};
-  `)};
+  }
 `;
 
 export const Strapline = styled.p`

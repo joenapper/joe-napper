@@ -1,6 +1,5 @@
-import { mediaBelow } from "@constants/media";
-import { spacing } from "@constants/theme";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import { deviceBelow, spacing } from "@constants/theme";
 
 export const SliderSliceLayoutWrapper = styled.section`
   & > div {
@@ -9,15 +8,15 @@ export const SliderSliceLayoutWrapper = styled.section`
     gap: ${spacing.s8};
 
     /* TODO: Align with Container component */
-    ${mediaBelow.desktop(css`
+    @media ${deviceBelow.desktop} {
       padding: ${spacing.s16} ${spacing.none};
       max-width: 100%;
       gap: ${spacing.s4};
-    `)};
+    }
 
-    ${mediaBelow.tablet(css`
+    @media ${deviceBelow.tablet} {
       padding: ${spacing.s8} ${spacing.none};
-    `)}
+    }
   }
 `;
 

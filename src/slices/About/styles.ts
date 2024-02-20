@@ -1,6 +1,5 @@
-import styled, { css } from "styled-components";
-import { colors, fontSize, spacing } from "@constants/theme";
-import { mediaBelow } from "@constants/media";
+import styled from "styled-components";
+import { colors, deviceBelow, fontSize, spacing } from "@constants/theme";
 
 export const Text = styled.p`
   color: ${colors.grey};
@@ -11,14 +10,14 @@ export const TechStack = styled.div`
   justify-content: center;
   gap: ${spacing.s4};
 
-  ${mediaBelow.tablet(css`
+  @media ${deviceBelow.tablet} {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-  `)};
+  }
 
-  ${mediaBelow.largeMobile(css`
+  @media ${deviceBelow.largeMobile} {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
-  `)};
+  }
 `;

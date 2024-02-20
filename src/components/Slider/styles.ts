@@ -1,10 +1,9 @@
-import { mediaBelow } from "@constants/media";
-import { spacing } from "@constants/theme";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import { deviceBelow, spacing } from "@constants/theme";
 
 export const CarouselWrapper = styled.div`
   .react-multi-carousel-list {
-    z-index: -1;
+    z-index: 0;
   }
 `;
 
@@ -16,7 +15,7 @@ export const CarouselSlide = styled.div`
     max-width: -webkit-fill-available;
   }
 
-  ${mediaBelow.tablet(css`
+  @media ${deviceBelow} {
     margin: 0 ${spacing.s2};
-  `)};
+  }
 `;

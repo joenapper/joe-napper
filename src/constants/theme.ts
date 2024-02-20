@@ -40,3 +40,19 @@ export const spacing = {
   s16: "64px",
   s17: "68px",
 } as const;
+
+const viewportWidths = {
+  mobile: "320px",
+  largeMobile: "480px",
+  tablet: "768px",
+  desktop: "1024px",
+  largeDesktop: "1440px",
+};
+
+export const deviceAbove = Object.fromEntries(
+  Object.entries(viewportWidths).map(([k, v]) => [k, `(min-width: ${v})`])
+) as typeof viewportWidths;
+
+export const deviceBelow = Object.fromEntries(
+  Object.entries(viewportWidths).map(([k, v]) => [k, `(max-width: ${v})`])
+) as typeof viewportWidths;

@@ -1,16 +1,15 @@
-import styled, { css } from "styled-components";
-import { colors, spacing } from "@constants/theme";
+import styled from "styled-components";
+import { colors, deviceBelow, spacing } from "@constants/theme";
 import type { NavProps } from "./types";
-import { mediaBelow } from "@constants/media";
 
 export const HeaderWrapper = styled.header`
   width: 100%;
   padding: ${spacing.s4} 10%;
   color: ${colors.white};
 
-  ${mediaBelow.tablet(css`
+  @media ${deviceBelow.tablet} {
     padding: ${spacing.s4};
-  `)};
+  }
 `;
 
 export const NavBar = styled.nav`
@@ -20,9 +19,9 @@ export const NavBar = styled.nav`
   height: 8vh;
   position: relative;
 
-  ${mediaBelow.tablet(css`
+  @media ${deviceBelow.tablet} {
     position: static;
-  `)}
+  }
 `;
 
 export const NavMenu = styled.ul<NavProps>`
@@ -30,8 +29,7 @@ export const NavMenu = styled.ul<NavProps>`
   justify-content: space-around;
   align-items: center;
 
-  /* TODO: Align with new media utils */
-  @media screen and (max-width: 768px) {
+  @media ${deviceBelow.tablet} {
     position: fixed;
     /* TODO: Review padding here */
     padding: 14vh 0 16vh 0;
@@ -64,18 +62,17 @@ export const NavMenu = styled.ul<NavProps>`
 export const NavItem = styled.li`
   padding-right: ${spacing.s8};
 
-  ${mediaBelow.tablet(css`
+  @media ${deviceBelow.tablet} {
     padding: 0;
     opacity: 0;
     display: contents;
-  `)}
+  }
 `;
 
 export const BurgerMenu = styled.div<NavProps>`
   display: none;
 
-  /* TODO: Align with new media utils */
-  @media screen and (max-width: 768px) {
+  @media ${deviceBelow.tablet} {
     display: block;
     cursor: pointer;
     z-index: 1;
