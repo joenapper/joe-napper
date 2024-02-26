@@ -10,7 +10,6 @@ import {
 } from "./styles";
 import type { ArticleCardProps } from "./types";
 
-// TODO: Merge with Card component
 export const ArticleCard = ({ image, title, text, link }: ArticleCardProps) => (
   <ArticleCardWrapper>
     <Image

@@ -38,11 +38,16 @@ export const TitleWrapper = styled.div`
 `;
 
 export const Text = styled.p`
+  min-height: 102px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 6;
   overflow: hidden;
   text-overflow: ellipsis;
+
+  @media ${deviceBelow.desktop} {
+    min-height: 85px;
+  }
 
   @media ${deviceBelow.tablet} {
     -webkit-line-clamp: 5;

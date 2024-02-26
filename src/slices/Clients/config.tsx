@@ -1,17 +1,17 @@
 const logoHeight = 60;
 
 export const items = [
-  <img src="/clients/nhs.png" alt="NHS" height={logoHeight} />,
-  <img src="/clients/bt.png" alt="BT" height={logoHeight} />,
-  <img src="/clients/hsbc.png" alt="HSBC" height={logoHeight} />,
-  <img src="/clients/cognizant.png" alt="Cognizant" height={logoHeight} />,
+  <img src="/clients/nhs.webp" alt="NHS" height={logoHeight} />,
+  <img src="/clients/bt.webp" alt="BT" height={logoHeight} />,
+  <img src="/clients/hsbc.webp" alt="HSBC" height={logoHeight} />,
+  <img src="/clients/cognizant.webp" alt="Cognizant" height={logoHeight} />,
   <img
-    src="/clients/oodle-car-finance.png"
+    src="/clients/oodle-car-finance.webp"
     alt="Oodle car finance"
     height={logoHeight}
   />,
   <img
-    src="/clients/sytner-group.png"
+    src="/clients/sytner-group.webp"
     alt="Sytner group"
     height={logoHeight}
   />,

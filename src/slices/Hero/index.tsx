@@ -18,7 +18,7 @@ export const Hero = () => (
   <Container as="main" variant="secondary">
     <HeroContent>
       <Strapline>
-        <PrimaryText>UI/UX DEVELOPER</PrimaryText>
+        <PrimaryText>UI/UX SPECIALIST</PrimaryText>
       </Strapline>
       <Title as="h1">
         Hello! I'm Joe Napper, <br />

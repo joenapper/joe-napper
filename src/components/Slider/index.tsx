@@ -10,7 +10,9 @@ export const Slider = ({ items, ...props }: SliderProps) => {
     <CarouselWrapper>
       <Carousel {...props} infinite responsive={props.responsive}>
         {items.map((item, index) => (
-          <CarouselSlide key={index}>{item}</CarouselSlide>
+          <CarouselSlide key={index} $showDots={props.showDots}>
+            {item}
+          </CarouselSlide>
         ))}
       </Carousel>
     </CarouselWrapper>

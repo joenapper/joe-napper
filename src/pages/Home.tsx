@@ -10,7 +10,6 @@ export const Home = () => (
     <Hero />
     <Projects />
     <About />
-    {/* Collage slice or testimonials slice */}
     <Clients />
     <Articles />
     <Contact />

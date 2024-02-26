@@ -18,7 +18,6 @@ import { SuccessModal } from "@components/Modals/ContactFormModal/SuccessModal";
 import { Loader } from "@components/Loader";
 import { Spacer } from "@components/Spacer";
 
-// TODO: Review to simplify this file
 export const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
 
@@ -68,7 +67,7 @@ export const Contact = () => {
         </Title>
         <Spacer desktopY="s8" mobileY="s4" />
         <ContactWrapper>
-          <Image src="/contact-hero.png" alt="Contact illustration" />
+          <Image src="/contact-hero.webp" alt="Contact illustration" />
           <ContactFormWrapper>
             <ContactForm ref={form} onSubmit={sendEmail}>
               <ContactFormTitleWrapper>

@@ -31,37 +31,37 @@ export const About = () => (
 
     <TechStack>
       <img
-        src="/tech-stack/HTML5.png"
+        src="/tech-stack/HTML5.webp"
         alt="HTML5"
         width={logoWidth}
         height={logoHeight}
       />
       <img
-        src="/tech-stack/CSS3.png"
+        src="/tech-stack/CSS3.webp"
         alt="CSS3"
         width={logoWidth}
         height={logoHeight}
       />
       <img
-        src="/tech-stack/javascript.png"
+        src="/tech-stack/javascript.webp"
         alt="JavaScript"
         width={logoWidth}
         height={logoHeight}
       />
       <img
-        src="/tech-stack/typescript.png"
+        src="/tech-stack/typescript.webp"
         alt="TypeScript"
         width={logoWidth}
         height={logoHeight}
       />
       <img
-        src="/tech-stack/react.png"
+        src="/tech-stack/react.webp"
         alt="React JS"
         width={logoWidth}
         height={logoHeight}
       />
       <img
-        src="/tech-stack/next.png"
+        src="/tech-stack/next.webp"
         alt="Next JS"
         width={logoWidth}
         height={logoHeight}
