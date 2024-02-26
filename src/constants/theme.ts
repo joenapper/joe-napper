@@ -1,0 +1,58 @@
+export const colors = {
+  white: "#ffffff",
+  black: "#000000",
+  grey: "#828282",
+  darkGrey: "#25282B",
+  primary: "#F2F60E",
+} as const;
+
+export const font = {
+  primary: `"Roboto", sans-serif`,
+  secondary: `"Inter Variable", sans-serif`,
+} as const;
+
+export const fontSize = {
+  xs: "12px",
+  sm: "14px",
+  base: "16px",
+  lg: "24px",
+  xl: "36px",
+  xxl: "54px",
+} as const;
+
+export const spacing = {
+  none: "0",
+  s1: "4px",
+  s2: "8px",
+  s3: "12px",
+  s4: "16px",
+  s5: "20px",
+  s6: "24px",
+  s7: "28px",
+  s8: "32px",
+  s9: "36px",
+  s10: "40px",
+  s11: "44px",
+  s12: "48px",
+  s13: "52px",
+  s14: "56px",
+  s15: "60px",
+  s16: "64px",
+  s17: "68px",
+} as const;
+
+const viewportWidths = {
+  mobile: "320px",
+  largeMobile: "480px",
+  tablet: "768px",
+  desktop: "1024px",
+  largeDesktop: "1440px",
+};
+
+export const deviceAbove = Object.fromEntries(
+  Object.entries(viewportWidths).map(([k, v]) => [k, `(min-width: ${v})`])
+) as typeof viewportWidths;
+
+export const deviceBelow = Object.fromEntries(
+  Object.entries(viewportWidths).map(([k, v]) => [k, `(max-width: ${v})`])
+) as typeof viewportWidths;
